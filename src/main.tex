@@ -5,6 +5,8 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -51,15 +53,47 @@
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-The abstract should briefly summarize the contents of the paper in
-150--250 words.
-
-\keywords{First keyword  \and Second keyword \and Another keyword.}
+    GSSSP (Generator of Synthetic Scans of Spectroscopic Plates) is a tool for generating labeled scans of physical spectroscopic observations.
+    The area of spectroscopic analysis is old in the Astronomic Domain. Legacy observational methods recorded stellar spectra on photographic plates. These plates have high historical and scientific value. However, a limited number of them have been digitized, resulting in an insufficient amount of data to train modern computer vision models for observation detection.
+    
+    In this work, we present a software tool that replicates the appearance of scanned spectroscopic plates by generating synthetic images containing spectra of artificial stellar objects. The generated images are accompanied by label files that enable the training of observation detection models.
+    
+    We trained a detection model and compared its performance when using only real data, only generated data, and a combination of both. The results show that GSSSP enables the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. The resulting model surpasses the current state of the art for this problem.
+    
+    \keywords{Generated data, Object detection, Spectroscopic plates}
 \end{abstract}
-%
-%
-%
-\section{First Section}
+
+\section{Spectroscopic Data}
+
+\textcolor{red}{Descripcion de las placas, relevancia, contexto de que hay pocas}.
+
+\subsection{Available Data}
+
+For this study, we use a dataset composed of 361 spectroscopic plates from \textcolor{red}{Cerro Tololo} that were scanned and labeled for observation detection. The dataset is publicly available
+\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. 
+Due to the limited availability of digitized spectroscopic plates, the dataset size is relatively small.
+
+\section{State of Art}
+
+\textcolor{red}{Mencion a trabajos previos donde se construyeron modelos de deteccion para observaciones}.
+
+\section{GSSSP}
+
+\textcolor{red}{En que consiste GSSSP, sus modulos. Caracteristicas principales, personalizacion de observaciones e imagenes de spectros}.
+
+\section{Experiment}
+
+\textcolor{red}{Detalles del entrenamiento, datos usados en cada uno y metricas de evaluacion}.
+
+\subsection{Results}
+
+\textcolor{red}{Resultados de cada entrenamiento}.
+
+\section{Conclusion}
+
+\textcolor{red}{Conclusions}.
+
+\section{Sample Section}
 \subsection{A Subsection Sample}
 Please note that the first paragraph of a section or subsection is
 not indented. The first paragraph that follows a table, figure,
