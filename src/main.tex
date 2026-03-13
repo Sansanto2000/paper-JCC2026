@@ -7,6 +7,13 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{threeparttablex}
+\usepackage{booktabs}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -65,6 +72,70 @@
 
 \section{Spectroscopic Data}
 
+Spectroscopy constitutes a fundamental tool for physic study of astronomical objects. The analysis of electromagnetic radiation receibed, absorbed, or reflected is posible infer physics propieties of objects. By example, quimic composition, temperature, radial speed. This science enable celest bodis study further of her position or apparent brightness~\cite{gray2021observation}. 
+
+In XX century the capture of spectroscopic data was very popular. The method consist in capture spectroscopic data through photography. With the peculiarity what the image persisted in glass plates instead of paper. Today many of these plates are conserved for their institutions~\cite{kunzmann2009real}. However, the persistence of data in physical plates can present problems under suboptimal storage conditions. Figure~\ref{fig:glass_plate} show a spectroscopic glass plate with two observations in its surface.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/glass-plate.png}
+    \caption{
+        Right, spectroscopic plate \texttt{A4418} of astronomical source \texttt{Zeta Puppis} captured at Observatorio Interamericano de Cerro Tololo (Chile) as part of the \texttt{ReTrOH}~\cite{niemela1977placa} project. The plate contains two spectroscopic observations. Left, wrapping, includes additional information about each observation.
+    }\label{fig:glass_plate}
+\end{figure}
+
+Accidents have occurred in involving this type of heritage. In 2016, due a burst pipe, Hardvard College Observatory suffered a flood that affected more than 61.000 plates in its colection~\cite{placas_DASCH}. Too, Facultad de Ciencias Astronomicas y Geofisicas de la Universidad Nacional de La Plata found an equally damaging situation, discovering mold on the furniture where the plaques were stored~\cite{peralta2025puesta}. 
+The risk of mold stains, scratches, cobwebs, or similar problems is significant and, if not properly addressed, can lead to consequences that permanently degrade the information available on each plate.
+
+In addition to physic deterioration can be introduced defects exist defects related to the capture process such as curvatures in the trace of the spectra, artifacts, or the loss of certain elements. Figure~\ref{fig:defectos_placas} show refences of plates with some defect.
+
+\begin{figure}[htb!]
+    \centering
+    \begin{subfigure}[b]{0.30\textwidth}
+        \centering
+        \includegraphics[height=5cm]{images/defecto_rayon.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.12\textwidth}
+        \centering
+        \includegraphics[height=5cm]{images/defecto_humedad.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.12\textwidth}
+        \centering
+        \includegraphics[height=5cm]{images/defecto_curvo.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.10\textwidth}
+        \centering
+        \includegraphics[height=5cm]{images/defecto_falta_lampara.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.10\textwidth}
+        \centering
+        \includegraphics[height=5cm]{images/defecto_falta_espectro.png}
+        \caption{}
+    \end{subfigure}
+    \caption{
+        Samples of possible defects on the plates. Defects associated with prolonged storage: (a) Scratches. (b) Dirt and/or moisture stains. Defects associated with the capture process: (c) Curved engraving. (d) Missing comparison lamps. (e) Comparison lamps without their respective spectrum.
+        }\label{fig:defectos_placas}
+\end{figure}
+
+For preserve this heritage and institutions as IAU (International Astronomical Union) prensented resolutions\footnote
+{\href{http://www.iau.org/static/publications/ib88.pdf}{UAI Resolution B3 (Agosto 2000): Safeguarding the Information in Photographic Observations}}. when remark the importance of keep spectroscopic plates for next generations of astronomers. IAU recommends digitalization as conservation method. This methods enable copying facilities and redundancies that can preserve the most relevant information in the long term.
+
+For advance in this many institutions begin projects of digitalization of their collections. Table~\ref{tab:colecciones} list many collections with big count of spectroscopic collections. Theirs digitalization percents and his calibration percents.
+
+\input{tables/list-colections}
+
+% Para que una placa sea de utilidad es necesario procesarla, extraer las características más relevantes de aquello que contiene y permitir que investigadores y/o académicos puedan emplear su información en nuevos proyectos. Notar que las colecciones mencionadas en la tabla~\ref{tab:colecciones} involucran 2 tipos de placas, placas fotográficas y placas espectroscópicas. Proyectos como \texttt{DASCH}~\citep{placas_DASCH} o \texttt{CPDP}~\citep{placas_SHAO} trabajan sobre placas fotográficas, procesar este tipo de placas tiene sus propios desafíos pero ya hay una método bien definido mediante el cual se puede lograr su procesado en un tiempo razonable~\citep{raouph2023prospectplatearchivephotometric}. La situación de colecciones como \texttt{ReTrOH}~\citep{Meilan2020} o el archivo \texttt{Foster}~\citep{archive_foster} es más compleja ya que las placas espectroscópicas tienen otra anatomía. No se trata de impresiones fotográficas del objeto astronómico sino de impresiones del espectro de luz del mismo. La figura~\ref{fig:comparacion} muestra una comparativa entre una placa fotográfica y una placa espectroscópica.
+
+
+
 \textcolor{red}{Descripcion de las placas, relevancia, contexto de que hay pocas}.
 
 \subsection{Available Data}
@@ -88,6 +159,8 @@ Due to the limited availability of digitized spectroscopic plates, the dataset s
 \subsection{Results}
 
 \textcolor{red}{Resultados de cada entrenamiento}.
+
+\input{tables/results.tex}
 
 \section{Conclusion}
 
@@ -136,10 +209,10 @@ schemas. Whenever possible, use vector graphics instead (see
 Fig.~\ref{fig1}).
 
 \begin{figure}
-\includegraphics[width=\textwidth]{fig1.eps}
-\caption{A figure caption is always placed below the illustration.
-Please note that short captions are centered, while long ones are
-justified by the macro package automatically.} \label{fig1}
+    \includegraphics[width=\textwidth]{fig1.eps}
+    \caption{A figure caption is always placed below the illustration.
+    Please note that short captions are centered, while long ones are
+    justified by the macro package automatically.} \label{fig1}
 \end{figure}
 
 \begin{theorem}

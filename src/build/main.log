@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  10 MAR 2026 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  12 MAR 2026 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -291,88 +291,325 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen169
+\ar@mcellbox=\box99
+\extrarowheight=\dimen170
+\NC@list=\toks22
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box100
+)
+\TX@col@width=\dimen171
+\TX@old@table=\dimen172
+\TX@old@col=\dimen173
+\TX@target=\dimen174
+\TX@delta=\dimen175
+\TX@cols=\count303
+\TX@ftn=\toks23
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen176
+\captionmargin=\dimen177
+\caption@leftmargin=\dimen178
+\caption@rightmargin=\dimen179
+\caption@width=\dimen180
+\caption@indent=\dimen181
+\caption@parindent=\dimen182
+\caption@hangindent=\dimen183
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecaptionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\bfseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count304
+\c@continuedfloat=\count305
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count306
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count307
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count308
+\LTcapwidth=\dimen184
+\LT@head=\box101
+\LT@firsthead=\box102
+\LT@foot=\box103
+\LT@lastfoot=\box104
+\LT@gbox=\box105
+\LT@cols=\count309
+\LT@rows=\count310
+\c@LT@tables=\count311
+\c@LT@chunks=\count312
+\LT@p@ftn=\toks24
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/threeparttablex\threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box106
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks25
+)
+\TPTL@width=\skip59
+) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen185
+\lightrulewidth=\dimen186
+\cmidrulewidth=\dimen187
+\belowrulesep=\dimen188
+\belowbottomsep=\dimen189
+\aboverulesep=\dimen190
+\abovetopsep=\dimen191
+\cmidrulesep=\dimen192
+\cmidrulekern=\dimen193
+\defaultaddspace=\dimen194
+\@cmidla=\count313
+\@cmidlb=\count314
+\@aboverulesep=\dimen195
+\@belowrulesep=\dimen196
+\@thisruleclass=\count315
+\@lastruleclass=\count316
+\@thisrulewidth=\dimen197
 ) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count303
-\l__pdf_internal_box=\box99
+\l__color_backend_stack_int=\count317
+\l__pdf_internal_box=\box107
 ) (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
-\scratchdimen=\dimen169
-\scratchbox=\box100
-\nofMPsegments=\count305
-\nofMParguments=\count306
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count307
-\MPscratchDim=\dimen170
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count318
+\scratchdimen=\dimen198
+\scratchbox=\box108
+\nofMPsegments=\count319
+\nofMParguments=\count320
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen199
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
+\everyMPtoPDFconversion=\toks27
 ) (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 24.
  (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.out) (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 55.
+(Font)              <7> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 55.
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 55.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 55.
+(Font)              <5> on input line 62.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 62.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 62.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 55.
+(Font)              for symbol `textbraceleft' on input line 62.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 55.
+(Font)              <9> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 55.
+(Font)              <6> on input line 62.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 55.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 62.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 1.66672pt
-(hyperref)                removed on input line 55.
+(hyperref)                removed on input line 62.
 
 
-Overfull \hbox (4.99063pt too wide) in paragraph at lines 56--58
+Overfull \hbox (4.99063pt too wide) in paragraph at lines 63--65
 []\OT1/cmr/m/n/9 GSSSP (Gen-er-a-tor of Syn-thetic Scans of Spec-tro-scopic Plates)
  []
 
+
+LaTeX Warning: Citation `gray2021observation' on page 1 undefined on input line 75.
+
 [1
 
-{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+LaTeX Warning: Citation `kunzmann2009real' on page 2 undefined on input line 77.
+
+<images/glass-plate.png, id=32, 546.3612pt x 199.10385pt>
+File: images/glass-plate.png Graphic file (type png)
+<use images/glass-plate.png>
+Package pdftex.def Info: images/glass-plate.png  used on input line 81.
+(pdftex.def)             Requested size: 347.12354pt x 126.4994pt.
+
+LaTeX Warning: Citation `niemela1977placa' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Citation `niemela1977placa' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Citation `placas_DASCH' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Citation `peralta2025puesta' on page 2 undefined on input line 87.
+
+<images/defecto_rayon.png, id=34, 441.65pt x 613.29124pt>
+File: images/defecto_rayon.png Graphic file (type png)
+<use images/defecto_rayon.png>
+Package pdftex.def Info: images/defecto_rayon.png  used on input line 96.
+(pdftex.def)             Requested size: 102.44669pt x 142.26378pt.
+<images/defecto_humedad.png, id=35, 201.75375pt x 613.29124pt>
+File: images/defecto_humedad.png Graphic file (type png)
+<use images/defecto_humedad.png>
+Package pdftex.def Info: images/defecto_humedad.png  used on input line 102.
+(pdftex.def)             Requested size: 46.7995pt x 142.26378pt.
+
+Overfull \hbox (5.14638pt too wide) in paragraph at lines 102--103
+ [][] 
+ []
+
+<images/defecto_curvo.png, id=36, 181.67876pt x 613.29124pt>
+File: images/defecto_curvo.png Graphic file (type png)
+<use images/defecto_curvo.png>
+Package pdftex.def Info: images/defecto_curvo.png  used on input line 108.
+(pdftex.def)             Requested size: 42.14284pt x 142.26378pt.
+<images/defecto_falta_lampara.png, id=37, 108.405pt x 613.29124pt>
+File: images/defecto_falta_lampara.png Graphic file (type png)
+<use images/defecto_falta_lampara.png>
+Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 114.
+(pdftex.def)             Requested size: 25.146pt x 142.26378pt.
+<images/defecto_falta_espectro.png, id=38, 152.57pt x 613.29124pt>
+File: images/defecto_falta_espectro.png Graphic file (type png)
+<use images/defecto_falta_espectro.png>
+Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 120.
+(pdftex.def)             Requested size: 35.39067pt x 142.26378pt.
+
+Overfull \hbox (0.67621pt too wide) in paragraph at lines 120--121
+ [][] 
+ []
+
+[2 <./images/glass-plate.png>] (tables/list-colections.tex
+Overfull \hbox (21.28397pt too wide) in alignment at lines 12--16
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.28397pt too wide) in alignment at lines 16--20
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.28397pt too wide) in alignment at lines 20--24
+ [] [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Citation `placas_DASCH' on page 3 undefined on input line 28.
+
+
+LaTeX Warning: Citation `placas_APPLAUSE' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation `placas_SHAO' on page 3 undefined on input line 34.
+
+
+LaTeX Warning: Citation `placas_MMO' on page 3 undefined on input line 37.
+
+
+LaTeX Warning: Citation ` placas_MMO_2' on page 3 undefined on input line 37.
+
+
+LaTeX Warning: Citation `peralta2025puesta' on page 3 undefined on input line 40.
+
+
+LaTeX Warning: Citation `placas_WFPDB' on page 3 undefined on input line 43.
+
+
+LaTeX Warning: Citation ` placas_WFPDB_2' on page 3 undefined on input line 43.
+
+
+LaTeX Warning: Citation `robert2021naroo' on page 3 undefined on input line 46.
+
+
+LaTeX Warning: Citation `robert2021naroo' on page 3 undefined on input line 49.
+
+
+LaTeX Warning: Citation `robert2021naroo' on page 3 undefined on input line 52.
+
+
+LaTeX Warning: Citation `archive_foster' on page 3 undefined on input line 55.
+
+
+LaTeX Warning: Citation `placas_HDAP' on page 3 undefined on input line 58.
+
+
+LaTeX Warning: Citation ` db_GAVO' on page 3 undefined on input line 58.
+
+
+LaTeX Warning: Citation `placa_DFBS' on page 3 undefined on input line 61.
+
+
+LaTeX Warning: Citation `archives_ukranian_observatories' on page 3 undefined on input line 64.
+
+
+LaTeX Warning: Citation `archives_ukranian_observatories' on page 3 undefined on input line 67.
+
+
+Overfull \hbox (21.28397pt too wide) in alignment at lines 24--72
+ [] [] [] [] [] [] 
+ []
+
+[3 <./images/defecto_rayon.png (PNG copy)> <./images/defecto_humedad.png> <./images/defecto_curvo.png> <./images/defecto_falta_lampara.png> <./images/defecto_falta_espectro.png>]) [4] (tables/results.tex) [5]
 Package epstopdf Info: Source file: <fig1.eps>
 (epstopdf)                    date: 2017-10-04 11:21:14
 (epstopdf)                    size: 357553 bytes
@@ -380,14 +617,14 @@ Package epstopdf Info: Source file: <fig1.eps>
 (epstopdf)                    date: 2026-03-10 18:00:23
 (epstopdf)                    size: 36500 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig1-eps-converted-to.pdf fig1.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
-<fig1-eps-converted-to.pdf, id=50, 345.29pt x 142.5325pt>
+<fig1-eps-converted-to.pdf, id=94, 345.29pt x 142.5325pt>
 File: fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use fig1-eps-converted-to.pdf>
-Package pdftex.def Info: fig1-eps-converted-to.pdf  used on input line 139.
+Package pdftex.def Info: fig1-eps-converted-to.pdf  used on input line 212.
 (pdftex.def)             Requested size: 347.12354pt x 143.29115pt.
- [3 <./fig1-eps-converted-to.pdf>] [4] (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.aux)
+ [6 <./fig1-eps-converted-to.pdf>] [7] (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -400,17 +637,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9B6C966EF8C1D57041439EA880B3304D;473.
  ) 
 Here is how much of TeX's memory you used:
- 9355 strings out of 474486
- 146629 string characters out of 5743754
- 1937542 words of memory out of 5000000
- 31518 multiletter control sequences out of 15000+600000
- 562576 words of font info for 51 fonts, out of 8000000 for 9000
+ 11375 strings out of 474486
+ 186316 string characters out of 5743754
+ 1946542 words of memory out of 5000000
+ 33482 multiletter control sequences out of 15000+600000
+ 562744 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,578b,466s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.pdf (4 pages, 239784 bytes).
+ 75i,11n,79p,1223b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.pdf (7 pages, 567189 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 44 words of extra memory for PDF output out of 10000 (max. 10000000)
 
