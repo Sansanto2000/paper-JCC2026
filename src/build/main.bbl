@@ -1,0 +1,89 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{archive_foster}
+Arcos, C., Vanzi, L., Vogt, N., Garcia, S., Ortiz, V., Acu{\~n}a, E.: Hidden
+  spectra treasures in the foster archive: A pilot study of the be stars
+  $\alpha$ eri, $\alpha$ col, $\omega$ car and $\eta$ cen. Galaxies
+  \textbf{10}(6), ~106 (2022)
+
+\bibitem{placas_APPLAUSE}
+Enke, H., Tuvikene, T., Groote, D., Edelmann, H., Heber, U.: Archives of
+  photographic plates for astronomical use (applause)-digitisation of
+  astronomical plates and their integration into the international virtual
+  observatory. Astronomy \& Astrophysics  \textbf{687}, ~A165 (2024)
+
+\bibitem{gray2021observation}
+Gray, D.F.: The observation and analysis of stellar photospheres. Cambridge
+  university press (2021)
+
+\bibitem{kunzmann2009real}
+Kunzmann, B.: Real and virtual heritage--historical astronomical plate archives
+  in sonneberg, bamberg and hamburg observatories, the evolution of
+  astrophysics and their influence on human knowledge and culture. Monuments
+  and Sites  \textbf{18},  304--309 (2009)
+
+\bibitem{meilan2018recuperacion}
+Meilán, N.S.: Recuperación del patrimonio observacional histórico:
+  Elaboración de un método óptimo de digitalización y extracción de datos.
+  Tesis de licenciatura, Universidad Nacional de La Plata, La Plata, Argentina
+  (2018), \url{https://sedici.unlp.edu.ar/handle/10915/74678}
+
+\bibitem{placa_DFBS}
+Mickaelian, A., Nesci, R., Rossi, C., Weedman, D., Cirimele, G., Sargsyan, L.,
+  Erastova, L., Gigoyan, K., Mikayelyan, G., Massaro, E., et~al.: The digitized
+  first byurakan survey--dfbs. Astronomy \& Astrophysics  \textbf{464}(3),
+  1177--1180 (2007)
+
+\bibitem{niemela1977placa}
+Niemel{\"a}, V.S.: Placa espectrogr{\'a}fica identificada como a4418 de la
+  fuente astron{\'o}mica zeta puppis (1976)
+
+\bibitem{archives_ukranian_observatories}
+Pakuliak, L., Kazantseva, L., Virun, N., Andruk, V.: Photographic archives of
+  ukrainian observatories: Digitizing a heritage. Proceedings of the
+  International Astronomical Union  \textbf{7}(S285),  389--391 (2011).
+  \doi{10.1017/S1743921312001160}
+
+\bibitem{peralta2025puesta}
+Peralta, R., L{\'o}pez, M., Iannuzzi, M., Aidelman, Y.J., Gamen, R., Cidale,
+  L.: Puesta en valor museol{\'o}gica y astron{\'o}mica de placas
+  espectrogr{\'a}ficas. Epistemolog{\'\i}a e Historia de la Astronom{\'\i}a.
+  Volumen 2  \textbf{2},  323--342 (2025)
+
+\bibitem{robert2021naroo}
+Robert, V., Desmars, J., Lainey, V., Arlot, J.E., Perlbarg, A.C., Horville, D.,
+  Aboudarham, J., Etienne, C., Gu{\'e}rard, J., Ilovaisky, S., et~al.: The
+  naroo digitization center-overview and scientific program. Astronomy \&
+  Astrophysics  \textbf{652}, ~A3 (2021)
+
+\bibitem{shang2024digitizationastronomicalphotographicplate}
+Shang, Z.J., Yu, Y., Wang, L.L., Yang, M.T., Yang, J., Shen, S.Y., Liu, M., Xu,
+  Q.F., Cui, C.Z., Fan, D.W., Tang, Z.H., Zhao, J.H.: Digitization of
+  astronomical photographic plate of china and astrometric measurement of
+  single-exposure plates (2024), \url{https://arxiv.org/abs/2403.09094}
+
+\bibitem{simcoe2006}
+Simcoe, R.J., Grindlay, J.E., Los, E.J., Doane, A., Laycock, S.G., Mink, D.J.,
+  Champine, G., Sliski, A.: {An ultrahigh-speed digitizer for the Harvard
+  College Observatory astronomical plates}. In: Tescher, A.G. (ed.)
+  Applications of Digital Image Processing XXIX. vol.~6312, p. 631217.
+  International Society for Optics and Photonics, SPIE (2006).
+  \doi{10.1117/12.681365}, \url{https://doi.org/10.1117/12.681365}
+
+\bibitem{placas_WFPDB}
+Tsvetkov, M.: The wide-field plate database: Development and access via
+  internet. Serdica Journal of Computing  \textbf{6}(1),  1--18 (2012)
+
+\bibitem{placas_WFPDB_2}
+Tsvetkov, M., Stavrev, K., Tsvetkova, K., Mutafov, A., Semkov, E., Kalaglarsky,
+  D.: Wide-field plate database {WFPDB}. {VO} resource provided by the {GAVO}
+  Data Center (2015), \url{http://dc.g-vo.org/wfpdb/q/cone/info}
+
+\bibitem{placas_DASCH}
+Williams, P.K.G.: Dasch: Bringing 100+ years of photographic data into the 21st
+  century and beyond (2025), \url{https://arxiv.org/abs/2501.12977}
+
+\end{thebibliography}

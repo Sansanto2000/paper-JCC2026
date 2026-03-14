@@ -138,7 +138,7 @@ To address these preservation challenges, many institutions have launched digiti
 
 \input{tables/list-colections}
 
-Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion, archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo, simcoe2006, shang2024digitizationastronomicalphotographicplate}. On average, scanning a plate takes approximately $15$--$30$ minutes. 
+Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion,archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo,simcoe2006,shang2024digitizationastronomicalphotographicplate}. On average, scanning a plate takes approximately $15$--$30$ minutes. 
 Calibration involves extracting relevant features from the plate and usually consists of several steps with varying levels of complexity. In previous work, we presented PlateUNLP, a software tool designed to assist in the calibration process. This tool can speed up calibration using machine learning, signal processing, and metadata-based approaches~\cite{clei2025}. In this work, we improve one stage of the calibration process, which consists of detecting observations in plate scans.
 
 \section{Detection problem}
@@ -219,7 +219,7 @@ Each dataset was divided into training and test sets using an 80/20 split:
 
 \begin{itemize}
     \item Real images (361): 289 for training and 72 for testing.
-    \item Generated images (\textcolor{red}{10,048}): \textcolor{red}{8,038} for training and textcolor{red}{2,010} for testing.
+    \item Generated images (\textcolor{red}{10,048}): \textcolor{red}{8,038} for training and \textcolor{red}{2,010} for testing.
 \end{itemize}
 
 \section{Detection model}
@@ -230,7 +230,7 @@ An initial model was trained using only real data in order to establish a baseli
 
 Additionally, a model was trained using only generated data and evaluated on both real and generated datasets. After, this model was fine-tuned using real data to obtain a final model, which was evaluated on the real dataset.
 
-To evaluate the model performance, Mean Average Precision (mAP) was used. This is a standard evaluation metric for object detection, computed from the precision–recall curve using a defined Intersection over Union (IoU) threshold~\cite{mapreference, ioureference}. 
+To evaluate the model performance, Mean Average Precision (mAP) was used. This is a standard evaluation metric for object detection, computed from the precision–recall curve using a defined Intersection over Union (IoU) threshold~\cite{mapreference,ioureference}. 
 
 IoU measures the overlap between the predicted bounding box and the ground truth bounding box. Its value ranges from 0 (no overlap) to 1 (perfect overlap).
 
@@ -260,28 +260,8 @@ Finally, fine-tuning the model pretrained on generated data with real training d
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
-% \bibliographystyle{splncs04}
-% \bibliography{mybibliography}
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
 %
-\begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
 
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
-
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
-Oct 2017
-\end{thebibliography}
 \end{document}
