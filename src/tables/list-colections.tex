@@ -1,75 +1,26 @@
-
-\newcolumntype{G}[1]{>{\centering\arraybackslash}p{#1}}
-\begin{ThreePartTable}
-
-    \begin{TableNotes}
-        \item[a] Solo se calibraron las placas fotográficas.
-        \item[b] \textit{Pulkovo Photographic Plate Database (Noviembre 2025)}. Disponible en \url{https://www.puldb.ru/db/plates/}.
-        \item[c] \textit{Ukrainian Virtual Observatory, AO KNU DA (Noviembre 2025)}. Disponible en \url{http://ukr-vo.org/digarchives/index.php?b4&1}.
-        \item[d] \textit{Ukrainian Virtual Observatory, AO LNU DA (Noviembre 2025)}. Disponible en \url{http://ukr-vo.org/digarchives/index.php?b3&1}.
-    \end{TableNotes}
-
-    \begin{longtable}{@{} p{3.7cm} r r r r G{2.5cm} @{}}
-        \toprule
-        Colección & \#plt.fot. & \#plt.spe. & Digitalizado & Calibrado & Rango\\
-        \midrule
-        \endhead%
-
-        \midrule[\heavyrulewidth]
-        \multicolumn{6}{r}{\textit{continúa en la página siguiente}}\\
-        \endfoot%
-
-        \midrule[\heavyrulewidth]
-        \insertTableNotes%
-        \endlastfoot%
-
-        \texttt{HCO} & $\sim$\,430.000 & $0$ & $100\%$ & $89\%$ & 1880--1992 \\ 
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_DASCH}} \\\addlinespace
-        \texttt{APPLAUSE} & 93.774 & 19.240 & 100$\%$ & 83\%$^{(a)}$ & 1893--1999 \\% Referencia a importancia de las placas del emisferio sur (see Tsvetkova et al. 2018, for detail). % Placas de espectro solo digitalizadas % Todas las espectroscopicas vienen de Hamburg y Potsdam archives. % Hay una referencia en summary que habla del protocolo de calibracion que establecieron los de Hamburg.
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_APPLAUSE}} \\\addlinespace
-        \texttt{CPDP} & 30.750 & 0 & $95\%$ & $51\%$ & 1901--1999 \\ % Placas no digitalizadas <-- defectos en las placas
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_SHAO}} \\\addlinespace
-        \texttt{MMO} & $>$8.500 & 0 & $94\%$ & $0\%$ & 1913--1993 \\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_MMO, placas_MMO_2}} \\\addlinespace
-        \texttt{ReTrHO} & ? & $>$15.000 & $4\%$ & $0\%$ & 1920--1980\\ % Placas no digitalizadas <- defectos en las placas
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{peralta2025puesta}} \\\addlinespace
-        \texttt{WFPDB} & 640.000 & ? & $100\%$ & $?\%$ & 1858--2005\\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_WFPDB, placas_WFPDB_2}} \\\addlinespace
-        \texttt{OCA Archive} & 11.800 & 0 & $100\%$ & $?\%$ & 1935--1996\\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{robert2021naroo}} \\\addlinespace
-        \texttt{OHP Archive} & 7.300 & 63.500 & $100\%$ & $?\%$ & 1944--1997\\ % Acceptan propuestas de digitalizacion (NAROO, min 200 placas)
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{robert2021naroo}} \\\addlinespace
-        \texttt{Pulkovo Archive}$^{(b)}$ & 46.483 & 0 & $100\%$ & $?\%$ & 1893--2005\\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{robert2021naroo}} \\\addlinespace
-        \texttt{Foster Archive} & 0 & $>$4.800 & $100\%$ & $?\%$ & 1928--1991\\ % El articulo habla de estrellas Be % Pagina 3 menciona defectos de las placas por clima. % Usan la tarea identify de IRAF % Pag 7 muestran funciones ¿I/O? relacionadas a la misma estrella, probablemente una red neuronal pueda aprovechar estas funciones para saber de que se trata. % Para Clasificar Be podriamos ver si hay una forma de convertir imagenes a espectros y eso ingresarlo a una red neuronal. Los espectros de la imagen probablemente mantengan patrones similares para estrellas Be. % BeSOS como base de datos con informacion detallada de espectros concretos
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{archive_foster}} \\\addlinespace
-        \texttt{HDAP} & $\sim$25.000 & 0 & $100\%$ & $?\%$ & 1880--1999\\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placas_HDAP, db_GAVO}} \\\addlinespace
-        \texttt{DFBS} & 0 & 1.874 & $100\%$ & $100\%$ & 1965--1980\\ % Automatizaron la extraccion y no tengo claro como resolvieron la calibracion en longitud de onda
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{placa_DFBS}} \\\addlinespace
-        \texttt{AO KNU}$^{(c)}$ & 20.000 & 0 & $ 22\%$ & $0\%$ & 1898--1996\\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{archives_ukranian_observatories}} \\\addlinespace
-        \texttt{AO LNU}$^{(d)}$ & 8.000 & 0 & $ 25\%$ & $0\%$ & 1939--1976 \\
-        \nopagebreak
-        \multicolumn{6}{l}{\cite{archives_ukranian_observatories}} \\\addlinespace
-        \bottomrule    
-        \caption{
-            Varios proyectos y colecciones relevantes de placas fotográficas y espectroscópicas.
-        }\label{tab:colecciones}
-    \end{longtable}
-
-\end{ThreePartTable}
+\begin{table}
+    \caption{
+        Some relevant projects or institutions with collections of spectroscopic plates.
+(a) It is known that HCO has a collection of spectroscopic plates, but the exact number is unknown.
+        }\label{tab:results}
+    \begin{tabularx}{\linewidth}{ p{2.5cm} C C C C C }
+        \hline
+        \centering Collection & \#plates. & Digitized & Calibrated & Date range & References\\
+        \hline
+        \texttt{HCO} & $?^{(a)}$ & $?\%$ & $0\%$ & 1880--1992 & \cite{placas_DASCH}\\
+        \hline
+        \texttt{APPLAUSE} & 19.240 & 100$\%$ & 0\% & 1893--1999 & \cite{placas_APPLAUSE}\\
+        \hline
+        \texttt{ReTrHO} & $>$15.000 & $4\%$ & $0\%$ & 1920--1980 & \cite{peralta2025puesta} \\
+        \hline
+        \texttt{WFPDB} & ? & $100\%$ & $?\%$ & 1858--2005 & \cite{placas_WFPDB, placas_WFPDB_2} \\
+        \hline
+        \texttt{OHP Archive} & 63.500 & $100\%$ & $?\%$ & 1944--1997 & \cite{robert2021naroo} \\
+        \hline
+        \texttt{Foster Archive} & $>$4.800 & $100\%$ & $?\%$ & 1928--1991 & \cite{archive_foster} \\
+        \hline
+        \texttt{DFBS} & 1.874 & $100\%$ & $100\%$ & 1965--1980 & \cite{placa_DFBS} \\
+        \hline
+    \end{tabularx}
+\end{table}
 

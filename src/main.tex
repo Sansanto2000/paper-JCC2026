@@ -12,6 +12,9 @@
 \usepackage{longtable}
 \usepackage{threeparttablex}
 \usepackage{booktabs}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{listings}
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 % Used for displaying a sample figure. If possible, figure files should
@@ -72,9 +75,11 @@
 
 \section{Spectroscopic Data}
 
-Spectroscopy constitutes a fundamental tool for physic study of astronomical objects. The analysis of electromagnetic radiation receibed, absorbed, or reflected is posible infer physics propieties of objects. By example, quimic composition, temperature, radial speed. This science enable celest bodis study further of her position or apparent brightness~\cite{gray2021observation}. 
+Spectroscopy constitutes a fundamental tool for the physical study of astronomical objects. Through the analysis of electromagnetic radiation received, absorbed, or reflected by an object, it is possible to infer several of its physical properties. For example, spectroscopy can reveal 
+the chemical composition, temperature, and radial velocity of astronomical sources. This technique enables the study of celestial bodies beyond their position or apparent brightness in the sky~\cite{gray2021observation}.
 
-In XX century the capture of spectroscopic data was very popular. The method consist in capture spectroscopic data through photography. With the peculiarity what the image persisted in glass plates instead of paper. Today many of these plates are conserved for their institutions~\cite{kunzmann2009real}. However, the persistence of data in physical plates can present problems under suboptimal storage conditions. Figure~\ref{fig:glass_plate} show a spectroscopic glass plate with two observations in its surface.
+In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. Today, many of these plates are preserved in their original institutions~\cite{kunzmann2009real}. Figure~\ref{fig:glass_plate} shows a 
+spectroscopic glass plate containing two observations on its surface.
 
 \begin{figure}[htb!]
     \centering
@@ -84,10 +89,12 @@ In XX century the capture of spectroscopic data was very popular. The method con
     }\label{fig:glass_plate}
 \end{figure}
 
-Accidents have occurred in involving this type of heritage. In 2016, due a burst pipe, Hardvard College Observatory suffered a flood that affected more than 61.000 plates in its colection~\cite{placas_DASCH}. Too, Facultad de Ciencias Astronomicas y Geofisicas de la Universidad Nacional de La Plata found an equally damaging situation, discovering mold on the furniture where the plaques were stored~\cite{peralta2025puesta}. 
-The risk of mold stains, scratches, cobwebs, or similar problems is significant and, if not properly addressed, can lead to consequences that permanently degrade the information available on each plate.
+However, storing information in physical plates can present challenges under suboptimal storage conditions. Several incidents affecting this type of heritage have occurred. 
+In 2016, due to a burst pipe, the Harvard College Observatory suffered a flood that affected more than 61,000 plates in its archive, including part of the Harvard plate collection currently digitized by the DASCH project~\cite{placas_DASCH}.
+A similar situation occurred at the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata, where mold was discovered on the furniture used to store the plates~\cite{peralta2025puesta}. 
+The risk of mold, dust, scratches, or other types of damage is significant and, if not properly addressed, can lead to the permanent degradation of the information stored on each plate.
 
-In addition to physic deterioration can be introduced defects exist defects related to the capture process such as curvatures in the trace of the spectra, artifacts, or the loss of certain elements. Figure~\ref{fig:defectos_placas} show refences of plates with some defect.
+In addition to physical deterioration, plates may present defects associated with the data acquisition process, such as curvature in the spectral trace, imaging artifacts, or the absence of certain calibration elements. Figure~\ref{fig:defectos_placas} shows examples of plates exhibiting different types of defects.
 
 \begin{figure}[htb!]
     \centering
@@ -125,118 +132,128 @@ In addition to physic deterioration can be introduced defects exist defects rela
         }\label{fig:defectos_placas}
 \end{figure}
 
-For preserve this heritage and institutions as IAU (International Astronomical Union) prensented resolutions\footnote
-{\href{http://www.iau.org/static/publications/ib88.pdf}{UAI Resolution B3 (Agosto 2000): Safeguarding the Information in Photographic Observations}}. when remark the importance of keep spectroscopic plates for next generations of astronomers. IAU recommends digitalization as conservation method. This methods enable copying facilities and redundancies that can preserve the most relevant information in the long term.
+To preserve this heritage, institutions such as the International Astronomical Union (IAU) have issued resolutions\footnote{\href{http://www.iau.org/static/publications/ib88.pdf}{IAU Resolution B3 (August 2000): Safeguarding the Information in Photographic Observations}} highlighting the importance of preserving spectroscopic plates for future generations of astronomers. The IAU recommends digitization as a conservation strategy. This process enables the creation of multiple copies and redundant archives, helping to preserve the most relevant information in the long term.
 
-For advance in this many institutions begin projects of digitalization of their collections. Table~\ref{tab:colecciones} list many collections with big count of spectroscopic collections. Theirs digitalization percents and his calibration percents.
+To address these preservation challenges, many institutions have launched digitization projects for their photographic plate collections. Table~\ref{tab:colecciones} lists some of the most relevant collections containing large numbers of spectroscopic plates, together with their digitization status and calibration progress.
 
 \input{tables/list-colections}
 
-% Para que una placa sea de utilidad es necesario procesarla, extraer las características más relevantes de aquello que contiene y permitir que investigadores y/o académicos puedan emplear su información en nuevos proyectos. Notar que las colecciones mencionadas en la tabla~\ref{tab:colecciones} involucran 2 tipos de placas, placas fotográficas y placas espectroscópicas. Proyectos como \texttt{DASCH}~\citep{placas_DASCH} o \texttt{CPDP}~\citep{placas_SHAO} trabajan sobre placas fotográficas, procesar este tipo de placas tiene sus propios desafíos pero ya hay una método bien definido mediante el cual se puede lograr su procesado en un tiempo razonable~\citep{raouph2023prospectplatearchivephotometric}. La situación de colecciones como \texttt{ReTrOH}~\citep{Meilan2020} o el archivo \texttt{Foster}~\citep{archive_foster} es más compleja ya que las placas espectroscópicas tienen otra anatomía. No se trata de impresiones fotográficas del objeto astronómico sino de impresiones del espectro de luz del mismo. La figura~\ref{fig:comparacion} muestra una comparativa entre una placa fotográfica y una placa espectroscópica.
+Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion, archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo, simcoe2006, shang2024digitizationastronomicalphotographicplate}. On average, scanning a plate takes approximately $15$--$30$ minutes. 
+Calibration involves extracting relevant features from the plate and usually consists of several steps with varying levels of complexity. In previous work, we presented PlateUNLP, a software tool designed to assist in the calibration process. This tool can speed up calibration using machine learning, signal processing, and metadata-based approaches~\cite{clei2025}. In this work, we improve one stage of the calibration process, which consists of detecting observations in plate scans.
 
+\section{Detection problem}
 
+An observation consists of the spectrum of an astronomical object together with two symmetrical comparison lamps located above and below it. A single plate can contain many observations; however, to extract scientific data, each observation must be isolated in a separate file. Figure~\ref{fig:observation_detection_sample} shows an example of how the regions corresponding to each observation should be defined.
+Each observation is defined as a bounding box enclosing the spectrum and its corresponding comparison lamps.
 
-\textcolor{red}{Descripcion de las placas, relevancia, contexto de que hay pocas}.
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \caption{
+        Example of how must be isolated each observation of a spectroscopic plate. The scan of the image contain \textcolor{red}{N} observations.
+    }\label{fig:observation_detection_sample}
+\end{figure}
 
-\subsection{Available Data}
+In previous work, we presented a YOLO-based detector~\cite{anteriordetectordeobservaciones} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations. Although the observations were correctly detected, the predicted bounding boxes were moderately precise.
 
-For this study, we use a dataset composed of 361 spectroscopic plates from \textcolor{red}{Cerro Tololo} that were scanned and labeled for observation detection. The dataset is publicly available
-\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. 
-Due to the limited availability of digitized spectroscopic plates, the dataset size is relatively small.
+This behavior can be observed in the IoU-based evaluation metrics: while $mAP_{IoU=0.50}=0.94$, the performance decreases very to $mAP_{IoU=0.75}$. This indicates that the model can locate the relative positions of the observations but struggles to accurately predict their exact positions and dimensions.
 
-\section{State of Art}
+This behavior can be attributed to the small number of scans available for training. As a result, the model lacks sufficient variability in the positions and dimensions of the observations. Data augmentation alleviates this issue; however, because the initial dataset is very small, the generated variations remain limited. Consequently, the model tends to memorize features from the restricted training data rather than generalizing. 
 
-\textcolor{red}{Mencion a trabajos previos donde se construyeron modelos de deteccion para observaciones}.
+In this work, we present a tool to address the problem of limited training data. It enables training with small datasets while maintaining high detection performance for observations with precise positions and dimensions.
 
 \section{GSSSP}
 
-\textcolor{red}{En que consiste GSSSP, sus modulos. Caracteristicas principales, personalizacion de observaciones e imagenes de spectros}.
+GSSSP\footnote{\href{https://github.com/Sansanto2000/GSSSP}{GSSSP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shape of every observation.
 
-\section{Experiment}
+The proposed generator constructs synthetic plate scans using a procedural model defined by parameterized numerical operations. This approach allows full control over the generated features and enables the creation of large synthetic datasets even when real data is scarce.
 
-\textcolor{red}{Detalles del entrenamiento, datos usados en cada uno y metricas de evaluacion}.
+The tool can be installed using package managers such as \texttt{pip} or \texttt{uv}. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the implemented generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches equivalent. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
 
-\subsection{Results}
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \caption{
+        Generated plate scans with labels of observartions of each plate.
+    }\label{fig:example_generation}
+\end{figure}
 
-\textcolor{red}{Resultados de cada entrenamiento}.
+
+The generator provides a high degree of parameterization, allowing control over plate geometry, observation layout, spectral characteristics, and the inclusion of artificial defects.
+\begin{itemize}
+    \item Height and width of the canvas.
+    \item Background color.
+    \item Inclination of observations within the plate.
+    \item Thickness of each observation component.
+    \item Distance between spectral components.
+    \item Distance between observations.
+    \item Horizontal and vertical deviation of each observation.
+    \item Number of observations per plate.
+    \item Number, intensity, and size of emission lines in each observation component.
+    \item Number, intensity, and size of absorption lines in each observation component.
+    \item Gaussian noise level.
+    \item Horizontal band noise level.
+    \item Number and size of dust stains.
+    \item Blur level.
+    \item Probability of adding a plate edge to the image.
+    \item Number, intensity, and length of horizontal light defects.
+\end{itemize}
+
+All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically.
+
+The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO annotation scheme~\cite{citaYOLO}. This means that the coordinates of each observation are expressed as normalized values between 0 and 1.
+
+\begin{lstlisting}
+    <class_id> <x_center> <y_center> <width> <height>
+\end{lstlisting}
+
+\textit{<class\_id>} represents the detection class. Since only one class (observations) is considered, its value is always 0. \textit{<x\_center>} and \textit{<y\_center>} correspond to the normalized coordinates of the bounding box center, while \textit{<width>} and \textit{<height>} represent its normalized dimensions. All values except \textit{<class\_id>} are expressed in the range $[0,1]$. Figure~\ref{fig:example_generation} shows examples of these annotations.
+
+\subsection{Available Data}
+
+\subsection{Available Data}
+
+For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata. These plates were scanned and annotated for observation detection. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional \textcolor{red}{10,048} synthetic images were generated using GSSSP to complement it.
+
+Each dataset was divided into training and test sets using an 80/20 split:
+
+\begin{itemize}
+    \item Real images (361): 289 for training and 72 for testing.
+    \item Generated images (\textcolor{red}{10,048}): \textcolor{red}{8,038} for training and textcolor{red}{2,010} for testing.
+\end{itemize}
+
+\section{Detection model}
+
+For model construction, the YOLO architecture was used~\cite{yoloreference}. The model was implemented in TensorFlow using the \texttt{keras-cv} library~\cite{kerascvreference}. A lightweight version of YOLO, \textit{yolo\_v8\_s}, was selected for the experiments.
+
+An initial model was trained using only real data in order to establish a baseline performance. This model was then evaluated on both real and generated datasets. If similar performance is obtained on both datasets, this indicates that the generated images exhibit patterns of comparable complexity to the real data.
+
+Additionally, a model was trained using only generated data and evaluated on both real and generated datasets. After, this model was fine-tuned using real data to obtain a final model, which was evaluated on the real dataset.
+
+To evaluate the model performance, Mean Average Precision (mAP) was used. This is a standard evaluation metric for object detection, computed from the precision–recall curve using a defined Intersection over Union (IoU) threshold~\cite{mapreference, ioureference}. 
+
+IoU measures the overlap between the predicted bounding box and the ground truth bounding box. Its value ranges from 0 (no overlap) to 1 (perfect overlap).
+
+The notation $mAP[IoU=X]$ indicates that the mAP is calculated considering predictions with $IoU \geq 0.X$ as true positives, while predictions with $IoU < 0.X$ are considered incorrect detections. The value of $X$ ranges between 0 and 1. Table~\ref{tab:results} shows the metrics obtained in each training experiment.
 
 \input{tables/results.tex}
 
-\section{Conclusion}
+\section{Conclusions}
 
-\textcolor{red}{Conclusions}.
+The results in Table~\ref{tab:results} show that the GSSSP tool can generate well-labeled synthetic scans of spectroscopic plates. The generated images capture part of the complexity of real images, and their randomness allows models to be prepared for plates containing many observations with different spectral positions and shapes.
 
-\section{Sample Section}
-\subsection{A Subsection Sample}
-Please note that the first paragraph of a section or subsection is
-not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
+A relevant beheavior is that a small dataset of real scans does not provide sufficient spatial variability in the positions and shapes of observations. This limitation prevents the model from accurately fitting bounding boxes, which negatively affects performance at higher IoU thresholds. For this reason, models trained only on real data and those trained on only generated data achieve similar performance at $mAP[IoU=0.50]$. However, the model trained on generated data performs better at $mAP[IoU=0.75]$. This indicates that the synthetic data provides greater variability, allowing the model to predict bounding boxes with higher precision compared to a model trained only on the limited real dataset.
 
-Subsequent paragraphs, however, are indented.
+Finally, fine-tuning the model pretrained on generated data with real training data allows the combination of the spatial variability provided by the generator with the complex patterns present in real images. This approach achieves the best overall performance, enabling more accurate and precise detection of observations in real spectroscopic plates. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained using the fine-tuned model.
 
-\subsubsection{Sample Heading (Third Level)} Only two levels of
-headings should be numbered. Lower level headings remain unnumbered;
-they are formatted as run-in headings.
-
-\paragraph{Sample Heading (Fourth Level)}
-The contribution should contain no more than four levels of
-headings. Table~\ref{tab1} gives a summary of all heading levels.
-
-\begin{table}
-\caption{Table captions should be placed above the
-tables.}\label{tab1}
-\begin{tabular}{|l|l|l|}
-\hline
-Heading level &  Example & Font size and style\\
-\hline
-Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
-1st-level heading &  {\large\bfseries 1 Introduction} & 12 point, bold\\
-2nd-level heading & {\bfseries 2.1 Printing Area} & 10 point, bold\\
-3rd-level heading & {\bfseries Run-in Heading in Bold.} Text follows & 10 point, bold\\
-4th-level heading & {\itshape Lowest Level Heading.} Text follows & 10 point, italic\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\noindent Displayed equations are centered and set on a separate
-line.
-\begin{equation}
-x + y = z
-\end{equation}
-Please try to avoid rasterized images for line-art diagrams and
-schemas. Whenever possible, use vector graphics instead (see
-Fig.~\ref{fig1}).
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{fig1.eps}
-    \caption{A figure caption is always placed below the illustration.
-    Please note that short captions are centered, while long ones are
-    justified by the macro package automatically.} \label{fig1}
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \caption{
+        Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images.
+    }\label{fig:real_prediction_sample}
 \end{figure}
 
-\begin{theorem}
-This is a sample theorem. The run-in heading is set in bold, while
-the following text appears in italics. Definitions, lemmas,
-propositions, and corollaries are styled the same way.
-\end{theorem}
-%
-% the environments 'definition', 'lemma', 'proposition', 'corollary',
-% 'remark', and 'example' are defined in the LLNCS documentclass as well.
-%
-\begin{proof}
-Proofs, examples, and remarks have the initial word in italics,
-while the following text appears in normal font.
-\end{proof}
-For citations of references, we prefer the use of square brackets
-and consecutive numbers. Citations using labels or the author/year
-convention are also acceptable. The following bibliography provides
-a sample reference list with entries for journal
-articles~\cite{ref_article1}, an LNCS chapter~\cite{ref_lncs1}, a
-book~\cite{ref_book1}, proceedings without editors~\cite{ref_proc1},
-and a homepage~\cite{ref_url1}. Multiple citations are grouped
-\cite{ref_article1,ref_lncs1,ref_book1},
-\cite{ref_article1,ref_book1,ref_proc1,ref_url1}.
 %
 % ---- Bibliography ----
 %
