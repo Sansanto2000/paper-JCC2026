@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/main"] 1773529910.03918 "build/main.aux" "build/main.bbl" "build/main" 1773529913.4455 0
+["bibtex build/main"] 1774626024.10729 "build/main.aux" "build/main.bbl" "build/main" 1774626028.96247 0
   "./bibliography.bib" 1773529906 6009 afff88ac35b5f4041c5805232bff40f2 ""
   "./splncs04.bst" 1521129746 33694 ee21ae2a29028dc8ad842a97200982c7 ""
-  "build/main.aux" 1773529912 6309 b5dc6f94c6359aba423179685c9c021c "pdflatex"
+  "build/main.aux" 1774626027 7161 b955612afa405aa403713146d93b821d "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1773529910.33749 "c:/Users/santi/OneDrive/Documentos/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1773529913.44632 0
+["pdflatex"] 1774626024.41859 "c:/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1774626028.96323 0
   "C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773177707 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
   "C:/Users/santi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1764029446 24225047 22bf486ea44b29a5fcae9c5960883e68 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -105,20 +105,22 @@
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/main.aux" 1773529912 6309 b5dc6f94c6359aba423179685c9c021c "pdflatex"
-  "build/main.bbl" 1773529910 4296 4fe980ee9ad20ff4ee3f47dedc93134f "bibtex build/main"
-  "build/main.out" 1773529912 473 9b6c966ef8c1d57041439ea880b3304d "pdflatex"
-  "c:/Users/santi/OneDrive/Documentos/Repositorios/paper-JCC2026/src/main.tex" 1773529635 20511 9367832cfc3585e849161fabd3fcb7ec ""
+  "build/main.aux" 1774626027 7161 b955612afa405aa403713146d93b821d "pdflatex"
+  "build/main.bbl" 1774626024 4296 4fe980ee9ad20ff4ee3f47dedc93134f "bibtex build/main"
+  "build/main.out" 1774626027 473 9b6c966ef8c1d57041439ea880b3304d "pdflatex"
+  "c:/Repositorios/paper-JCC2026/src/main.tex" 1774626024 23036 c745f212d49ab8dc137e7f9cfbbc8a11 ""
   "images/defecto_curvo.png" 1764001119 31758 a6d27879cee943726b39d56f9dec822f ""
   "images/defecto_falta_espectro.png" 1764001119 15540 f342c832b848b880b82eb4c91ce9795c ""
   "images/defecto_falta_lampara.png" 1764001119 9402 de5d2f9c41248ba3b7657c6c911f3483 ""
   "images/defecto_humedad.png" 1764001119 25145 9107f576d88e396b7bd10964ec919fe6 ""
   "images/defecto_rayon.png" 1764001119 49482 eee17d7ebfbfa32e6cdc6b63d2f3119a ""
   "images/glass-plate.png" 1764001119 104614 2955282843008543b4d959a83b9adcc2 ""
-  "images/in-progress.png" 1773527475 4528 6df6f910825d024bac76262b14d876f7 ""
+  "images/plot_generated_labeled.png" 1774624363 1476103 08e75fa90d183554517d90e2327af13a ""
+  "images/plot_real_labeled.png" 1774624667 1187272 897b01cbcde3d0d47b79170731c4fde4 ""
+  "images/test_predictions.png" 1774625649 873360 df8616d5168f994f7ac9c33bfe17b5df ""
   "llncs.cls" 1521129700 43467 b08ec23e994470d7d8fc268d245cf555 ""
-  "main.tex" 1773529635 20511 9367832cfc3585e849161fabd3fcb7ec ""
-  "tables/list-colections.tex" 1773529734 1236 1f979b3bbbc1b9ac1a835cfbc127f71a ""
+  "main.tex" 1774626024 23036 c745f212d49ab8dc137e7f9cfbbc8a11 ""
+  "tables/list-colections.tex" 1774626019 1240 a13e37ba06a4c55b64ca2837487ac324 ""
   "tables/results.tex" 1773527475 1061 e7843eadea54469558d0c332d9981dea ""
   (generated)
   "build/main.aux"

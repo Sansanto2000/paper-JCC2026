@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  14 MAR 2026 20:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  27 MAR 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/santi/OneDrive/Documentos/Repositorios/paper-JCC2026/src/main.tex
-(c:/Users/santi/OneDrive/Documentos/Repositorios/paper-JCC2026/src/main.tex
+**c:/Repositorios/paper-JCC2026/src/main.tex
+(c:/Repositorios/paper-JCC2026/src/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (llncs.cls
@@ -419,11 +419,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box109
-) (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.aux
-
-LaTeX Warning: Label `tab:results' multiply defined.
-
-)
+) (c:\Repositorios\paper-JCC2026\src\build\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -464,7 +460,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 27.
- (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.out) (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.out)
+ (c:\Repositorios\paper-JCC2026\src\build\main.out) (c:\Repositorios\paper-JCC2026\src\build\main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -502,111 +498,108 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 1.66672pt
 (hyperref)                removed on input line 65.
 
-
-Overfull \hbox (4.99063pt too wide) in paragraph at lines 66--68
-[]\OT1/cmr/m/n/9 GSSSP (Gen-er-a-tor of Syn-thetic Scans of Spec-tro-scopic Plates)
- []
-
 [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 <images/glass-plate.png, id=36, 546.3612pt x 199.10385pt>
 File: images/glass-plate.png Graphic file (type png)
 <use images/glass-plate.png>
-Package pdftex.def Info: images/glass-plate.png  used on input line 86.
+Package pdftex.def Info: images/glass-plate.png  used on input line 88.
 (pdftex.def)             Requested size: 347.12354pt x 126.4994pt.
 <images/defecto_rayon.png, id=46, 441.65pt x 613.29124pt>
 File: images/defecto_rayon.png Graphic file (type png)
 <use images/defecto_rayon.png>
-Package pdftex.def Info: images/defecto_rayon.png  used on input line 103.
+Package pdftex.def Info: images/defecto_rayon.png  used on input line 105.
 (pdftex.def)             Requested size: 102.44669pt x 142.26378pt.
 <images/defecto_humedad.png, id=47, 201.75375pt x 613.29124pt>
 File: images/defecto_humedad.png Graphic file (type png)
 <use images/defecto_humedad.png>
-Package pdftex.def Info: images/defecto_humedad.png  used on input line 109.
+Package pdftex.def Info: images/defecto_humedad.png  used on input line 111.
 (pdftex.def)             Requested size: 46.7995pt x 142.26378pt.
 
-Overfull \hbox (5.14638pt too wide) in paragraph at lines 109--110
+Overfull \hbox (5.14638pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
 <images/defecto_curvo.png, id=48, 181.67876pt x 613.29124pt>
 File: images/defecto_curvo.png Graphic file (type png)
 <use images/defecto_curvo.png>
-Package pdftex.def Info: images/defecto_curvo.png  used on input line 115.
+Package pdftex.def Info: images/defecto_curvo.png  used on input line 117.
 (pdftex.def)             Requested size: 42.14284pt x 142.26378pt.
 <images/defecto_falta_lampara.png, id=49, 108.405pt x 613.29124pt>
 File: images/defecto_falta_lampara.png Graphic file (type png)
 <use images/defecto_falta_lampara.png>
-Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 121.
+Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 123.
 (pdftex.def)             Requested size: 25.146pt x 142.26378pt.
 <images/defecto_falta_espectro.png, id=50, 152.57pt x 613.29124pt>
 File: images/defecto_falta_espectro.png Graphic file (type png)
 <use images/defecto_falta_espectro.png>
-Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 127.
+Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 129.
 (pdftex.def)             Requested size: 35.39067pt x 142.26378pt.
 
-Overfull \hbox (0.67621pt too wide) in paragraph at lines 127--128
+Overfull \hbox (0.67621pt too wide) in paragraph at lines 129--130
  [][] 
  []
 
-[2 <./images/glass-plate.png>]
+[2] [3 <./images/glass-plate.png> <./images/defecto_rayon.png (PNG copy)> <./images/defecto_humedad.png> <./images/defecto_curvo.png> <./images/defecto_falta_lampara.png> <./images/defecto_falta_espectro.png>] (tables/list-colections.tex)
 
-LaTeX Warning: Reference `tab:colecciones' on page 3 undefined on input line 137.
+LaTeX Warning: Citation `clei2025' on page 4 undefined on input line 144.
 
-(tables/list-colections.tex)
+<images/plot_real_labeled.png, id=137, 1073.2095pt x 714.7503pt>
+File: images/plot_real_labeled.png Graphic file (type png)
+<use images/plot_real_labeled.png>
+Package pdftex.def Info: images/plot_real_labeled.png  used on input line 153.
+(pdftex.def)             Requested size: 347.12354pt x 231.17867pt.
 
-LaTeX Warning: Citation `clei2025' on page 3 undefined on input line 142.
-
-[3 <./images/defecto_rayon.png (PNG copy)> <./images/defecto_humedad.png> <./images/defecto_curvo.png> <./images/defecto_falta_lampara.png> <./images/defecto_falta_espectro.png>]
-<images/in-progress.png, id=142, 291.0875pt x 174.6525pt>
-File: images/in-progress.png Graphic file (type png)
-<use images/in-progress.png>
-Package pdftex.def Info: images/in-progress.png  used on input line 151.
-(pdftex.def)             Requested size: 347.12354pt x 208.28943pt.
-
-
-LaTeX Warning: Citation `anteriordetectordeobservaciones' on page 4 undefined on input line 157.
+LaTeX Warning: Citation `anteriordetectordeobservaciones' on page 4 undefined on input line 159.
 
 [4]
-File: images/in-progress.png Graphic file (type png)
-<use images/in-progress.png>
-Package pdftex.def Info: images/in-progress.png  used on input line 175.
-(pdftex.def)             Requested size: 347.12354pt x 208.28943pt.
- [5 <./images/in-progress.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `citaYOLO' on page 6 undefined on input line 204.
+ [5 <./images/plot_real_labeled.png>]
+<images/plot_generated_labeled.png, id=168, 1073.2095pt x 714.7503pt>
+File: images/plot_generated_labeled.png Graphic file (type png)
+<use images/plot_generated_labeled.png>
+Package pdftex.def Info: images/plot_generated_labeled.png  used on input line 179.
+(pdftex.def)             Requested size: 347.12354pt x 231.17867pt.
+ [6]
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 207.
+LaTeX Warning: Citation `citaYOLO' on page 7 undefined on input line 208.
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 211.
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 207.
- [6]
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 211.
 
-LaTeX Warning: Citation `yoloreference' on page 7 undefined on input line 227.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [7 <./images/plot_generated_labeled.png>]
 
-LaTeX Warning: Citation `kerascvreference' on page 7 undefined on input line 227.
-
-
-LaTeX Warning: Citation `mapreference' on page 7 undefined on input line 233.
+LaTeX Warning: Citation `yoloreference' on page 8 undefined on input line 229.
 
 
-LaTeX Warning: Citation `ioureference' on page 7 undefined on input line 233.
+LaTeX Warning: Citation `kerascvreference' on page 8 undefined on input line 229.
 
 
-Overfull \hbox (0.32039pt too wide) in paragraph at lines 235--236
+LaTeX Warning: Citation `mapreference' on page 8 undefined on input line 235.
+
+
+LaTeX Warning: Citation `ioureference' on page 8 undefined on input line 235.
+
+
+Overfull \hbox (0.32039pt too wide) in paragraph at lines 237--238
 []\OT1/cmr/m/n/10 IoU mea-sures the over-lap be-tween the pre-dicted bound-ing box and the ground
  []
 
-(tables/results.tex) [7]
-File: images/in-progress.png Graphic file (type png)
-<use images/in-progress.png>
-Package pdftex.def Info: images/in-progress.png  used on input line 251.
-(pdftex.def)             Requested size: 347.12354pt x 208.28943pt.
- (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.bbl [8]
+(tables/results.tex) [8]
+<images/test_predictions.png, id=201, 857.1222pt x 570.933pt>
+File: images/test_predictions.png Graphic file (type png)
+<use images/test_predictions.png>
+Package pdftex.def Info: images/test_predictions.png  used on input line 253.
+(pdftex.def)             Requested size: 347.12354pt x 231.2266pt.
+ (c:\Repositorios\paper-JCC2026\src\build\main.bbl [9]
 Underfull \hbox (badness 10000) in paragraph at lines 45--49
 []\OT1/cmr/m/n/9 Pakuliak, L., Kazant-seva, L., Virun, N., An-druk, V.: Pho-to-graphic
  []
@@ -621,7 +614,7 @@ Underfull \hbox (badness 4531) in paragraph at lines 45--49
 \OT1/cmr/m/n/9 ings of the In-ter-na-tional As-tro-nom-i-cal Union \OT1/cmr/bx/n/9 7\OT1/cmr/m/n/9 (S285), 389--391 (2011).
  []
 
-[9]) [10] (c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.aux)
+[10 <./images/test_predictions.png>]) [11] (c:\Repositorios\paper-JCC2026\src\build\main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -630,27 +623,21 @@ L3 programming layer <2024-01-04>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9B6C966EF8C1D57041439EA880B3304D;473.
  ) 
 Here is how much of TeX's memory you used:
- 13044 strings out of 474486
- 209318 string characters out of 5743754
+ 13058 strings out of 474486
+ 209163 string characters out of 5743754
  1943542 words of memory out of 5000000
- 35122 multiletter control sequences out of 15000+600000
+ 35136 multiletter control sequences out of 15000+600000
  562744 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,803b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,819b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on c:\Users\santi\OneDrive\Documentos\Repositorios\paper-JCC2026\src\build\main.pdf (10 pages, 553391 bytes).
+Output written on c:\Repositorios\paper-JCC2026\src\build\main.pdf (11 pages, 4419055 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
+ 314 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
- 44 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

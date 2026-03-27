@@ -63,12 +63,14 @@
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-    GSSSP (Generator of Synthetic Scans of Spectroscopic Plates) is a tool for generating labeled scans of physical spectroscopic observations.
-    The area of spectroscopic analysis is old in the Astronomic Domain. Legacy observational methods recorded stellar spectra on photographic plates. These plates have high historical and scientific value. However, a limited number of them have been digitized, resulting in an insufficient amount of data to train modern computer vision models for observation detection.
+    The area of spectroscopic analysis is old in the Astronomic Domain. Legacy observational methods recorded stellar spectra on photographic plates. These plates have high historical and scientific value. And are essentials to obtain scientific data from the past of certain astronomical objects.
+    Due its characteristics are vulnerable lose of information. Reason for many institutions have launched digitization projects to preserve this heritage.
     
-    In this work, we present a software tool that replicates the appearance of scanned spectroscopic plates by generating synthetic images containing spectra of artificial stellar objects. The generated images are accompanied by label files that enable the training of observation detection models.
+    Despite the efforts of digitization, the process is still in progress and many plates remain undigitalized. The act of digitizing a plate is time-consuming, taking approximately 15 to 30 minutes per plate. Even after digitization, many tasks essentials for scientific analysis must be performed manually. Between these tasks, the detection and segmentation of observations on the plates is a relevant step. This process is slow and prone to errors, making it a bottleneck in the workflow. Many other processes essentials for scientific analysis of spectroscopic plates are still performed manually, which further emphasizes the need for automation in this domain.
+
+    Are plates to be digitalized what can be relevants but not have enough data to train modern computer vision models for observation detection. With this challenge in mind, we present GSSSP (Generator of Synthetic Scans of Spectroscopic Plates), a tool for generating labeled scans of physical spectroscopic observations. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shape of every observation. Datasets ready for use in training detection models for observations detections in scans of real historical spectroscopic plates.
     
-    We trained a detection model and compared its performance when using only real data, only generated data, and a combination of both. The results show that GSSSP enables the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. The resulting model surpasses the current state of the art for this problem.
+    For validate the tool we trained a detection model and compared its performance when using only real data, only generated data, and a combination of both. The results show that GSSSP enables the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. The resulting model surpasses the current state of the art for this problem.
     
     \keywords{Generated data, Object detection, Spectroscopic plates}
 \end{abstract}
@@ -78,8 +80,8 @@
 Spectroscopy constitutes a fundamental tool for the physical study of astronomical objects. Through the analysis of electromagnetic radiation received, absorbed, or reflected by an object, it is possible to infer several of its physical properties. For example, spectroscopy can reveal 
 the chemical composition, temperature, and radial velocity of astronomical sources. This technique enables the study of celestial bodies beyond their position or apparent brightness in the sky~\cite{gray2021observation}.
 
-In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. Today, many of these plates are preserved in their original institutions~\cite{kunzmann2009real}. Figure~\ref{fig:glass_plate} shows a 
-spectroscopic glass plate containing two observations on its surface.
+In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. The plates captured in this time have high historical and scientific value, as they contain information about the past of certain astronomical objects, some very desired above all for objects of sky of the southern hemisphere, which were less observed than those of the northern hemisphere in these years.
+Today, many of these plates are preserved in their original institutions~\cite{kunzmann2009real}. Figure~\ref{fig:glass_plate} shows a spectroscopic glass plate containing two observations on its surface.
 
 \begin{figure}[htb!]
     \centering
@@ -94,7 +96,7 @@ In 2016, due to a burst pipe, the Harvard College Observatory suffered a flood t
 A similar situation occurred at the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata, where mold was discovered on the furniture used to store the plates~\cite{peralta2025puesta}. 
 The risk of mold, dust, scratches, or other types of damage is significant and, if not properly addressed, can lead to the permanent degradation of the information stored on each plate.
 
-In addition to physical deterioration, plates may present defects associated with the data acquisition process, such as curvature in the spectral trace, imaging artifacts, or the absence of certain calibration elements. Figure~\ref{fig:defectos_placas} shows examples of plates exhibiting different types of defects.
+In addition to physical deterioration, plates may present defects associated with the data acquisition process, such as curvature in the spectral trace, imaging artifacts, or the absence of certain calibration elements. Figure~\ref{fig:defectos_placas} shows examples of plates exhibiting observations with different types of defects.
 
 \begin{figure}[htb!]
     \centering
@@ -128,13 +130,13 @@ In addition to physical deterioration, plates may present defects associated wit
         \caption{}
     \end{subfigure}
     \caption{
-        Samples of possible defects on the plates. Defects associated with prolonged storage: (a) Scratches. (b) Dirt and/or moisture stains. Defects associated with the capture process: (c) Curved engraving. (d) Missing comparison lamps. (e) Comparison lamps without their respective spectrum.
+        Samples of possible defects on the plates. Defects associated with prolonged storage: (a) Scratches.\@ (b) Dirt and/or moisture stains. Defects associated with the capture process: (c) Curved engraving.\@ (d) Missing comparison lamps.\@ (e) Comparison lamps without their respective spectrum.
         }\label{fig:defectos_placas}
 \end{figure}
 
 To preserve this heritage, institutions such as the International Astronomical Union (IAU) have issued resolutions\footnote{\href{http://www.iau.org/static/publications/ib88.pdf}{IAU Resolution B3 (August 2000): Safeguarding the Information in Photographic Observations}} highlighting the importance of preserving spectroscopic plates for future generations of astronomers. The IAU recommends digitization as a conservation strategy. This process enables the creation of multiple copies and redundant archives, helping to preserve the most relevant information in the long term.
 
-To address these preservation challenges, many institutions have launched digitization projects for their photographic plate collections. Table~\ref{tab:colecciones} lists some of the most relevant collections containing large numbers of spectroscopic plates, together with their digitization status and calibration progress.
+To address these preservation challenges, many institutions have launched digitization projects for their photographic plate collections. Table~\ref{tab:collections} lists some of the most relevant collections containing large numbers of spectroscopic plates, together with their digitization status and calibration progress.
 
 \input{tables/list-colections}
 
@@ -148,13 +150,15 @@ Each observation is defined as a bounding box enclosing the spectrum and its cor
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \includegraphics[width=1\textwidth]{images/plot_real_labeled.png}
     \caption{
-        Example of how must be isolated each observation of a spectroscopic plate. The scan of the image contain \textcolor{red}{N} observations.
+        Examples of how must be isolated each observation of a spectroscopic plate. The images shows different spectroscopic plates with different numbers of observations. Each bounding box encloses the spectrum and its corresponding comparison lamps. When the observation is to big the bounding box can be cut off by the plate edge, as in the rightmost top image.
     }\label{fig:observation_detection_sample}
 \end{figure}
 
-In previous work, we presented a YOLO-based detector~\cite{anteriordetectordeobservaciones} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations. Although the observations were correctly detected, the predicted bounding boxes were moderately precise.
+In previous work, we presented a YOLO-based detector~\cite{anteriordetectordeobservaciones} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations.
+
+The predicted bounding boxes often do not align well with the actual boundaries of the observations. This issue is particularly problematic for subsequent calibration steps, as it can lead to the inclusion of unwanted background or the exclusion of relevant parts of the spectrum. For example, if the predicted bounding box cuts off a portion of the comparison lamp, it can cause errors in wavelength calibration, which relies on accurately capturing the lamp's spectral lines.
 
 This behavior can be observed in the IoU-based evaluation metrics: while $mAP_{IoU=0.50}=0.94$, the performance decreases very to $mAP_{IoU=0.75}$. This indicates that the model can locate the relative positions of the observations but struggles to accurately predict their exact positions and dimensions.
 
@@ -168,13 +172,13 @@ GSSSP\footnote{\href{https://github.com/Sansanto2000/GSSSP}{GSSSP repository}} i
 
 The proposed generator constructs synthetic plate scans using a procedural model defined by parameterized numerical operations. This approach allows full control over the generated features and enables the creation of large synthetic datasets even when real data is scarce.
 
-The tool can be installed using package managers such as \texttt{pip} or \texttt{uv}. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the implemented generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches equivalent. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
+The tool can be installed as a package. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the implemented generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches equivalent. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \includegraphics[width=1\textwidth]{images/plot_generated_labeled.png}
     \caption{
-        Generated plate scans with labels of observartions of each plate.
+        Generated plate scans with labels of observations of each plate.
     }\label{fig:example_generation}
 \end{figure}
 
@@ -199,7 +203,7 @@ The generator provides a high degree of parameterization, allowing control over 
     \item Number, intensity, and length of horizontal light defects.
 \end{itemize}
 
-All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically.
+All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically. The generated images also can reproduce extreme cases what are present in real plates but rare cases, such as plates with many observations, plates with observations that are very close to each other, or plates with one observation what occupies almost all of the plate. This variability allows the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning.
 
 The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO annotation scheme~\cite{citaYOLO}. This means that the coordinates of each observation are expressed as normalized values between 0 and 1.
 
@@ -211,15 +215,13 @@ The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO
 
 \subsection{Available Data}
 
-\subsection{Available Data}
-
-For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata. These plates were scanned and annotated for observation detection. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional \textcolor{red}{10,048} synthetic images were generated using GSSSP to complement it.
+For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata. These plates were scanned and annotated for observation detection. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional 96,000 synthetic images were generated using GSSSP to complement it.
 
 Each dataset was divided into training and test sets using an 80/20 split:
 
 \begin{itemize}
     \item Real images (361): 289 for training and 72 for testing.
-    \item Generated images (\textcolor{red}{10,048}): \textcolor{red}{8,038} for training and \textcolor{red}{2,010} for testing.
+    \item Generated images (96,000): 76,800 for training and 19,200 for testing.
 \end{itemize}
 
 \section{Detection model}
@@ -240,7 +242,7 @@ The notation $mAP[IoU=X]$ indicates that the mAP is calculated considering predi
 
 \section{Conclusions}
 
-The results in Table~\ref{tab:results} show that the GSSSP tool can generate well-labeled synthetic scans of spectroscopic plates. The generated images capture part of the complexity of real images, and their randomness allows models to be prepared for plates containing many observations with different spectral positions and shapes.
+The re images capture part of the complexity of results in Table~\ref{tab:results} show that the GSSSP tool can generate well-labeled synthetic scans of spectroscopic plates. The generatedl images, and their randomness allows models to be prepared for plates containing many observations with different spectral positions and shapes.
 
 A relevant beheavior is that a small dataset of real scans does not provide sufficient spatial variability in the positions and shapes of observations. This limitation prevents the model from accurately fitting bounding boxes, which negatively affects performance at higher IoU thresholds. For this reason, models trained only on real data and those trained on only generated data achieve similar performance at $mAP[IoU=0.50]$. However, the model trained on generated data performs better at $mAP[IoU=0.75]$. This indicates that the synthetic data provides greater variability, allowing the model to predict bounding boxes with higher precision compared to a model trained only on the limited real dataset.
 
@@ -248,9 +250,9 @@ Finally, fine-tuning the model pretrained on generated data with real training d
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=1\textwidth]{images/in-progress.png}
+    \includegraphics[width=1\textwidth]{images/test_predictions.png}
     \caption{
-        Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images.
+        Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries.
     }\label{fig:real_prediction_sample}
 \end{figure}
 
