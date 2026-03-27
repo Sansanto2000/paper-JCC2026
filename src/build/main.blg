@@ -5,52 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: splncs04.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "clei2025"
-Warning--I didn't find a database entry for "anteriordetectordeobservaciones"
-Warning--I didn't find a database entry for "citaYOLO"
-Warning--I didn't find a database entry for "yoloreference"
-Warning--I didn't find a database entry for "kerascvreference"
-Warning--I didn't find a database entry for "mapreference"
-Warning--I didn't find a database entry for "ioureference"
-You've used 15 entries,
+You've used 21 entries,
             2850 wiz_defined-function locations,
-            706 strings with 8434 characters,
-and the built_in function-call counts, 9279 in all, are:
-= -- 697
-> -- 409
-< -- 18
-+ -- 170
-- -- 151
-* -- 635
-:= -- 1213
-add.period$ -- 16
-call.type$ -- 15
-change.case$ -- 119
+            734 strings with 9970 characters,
+and the built_in function-call counts, 13432 in all, are:
+= -- 1026
+> -- 601
+< -- 23
++ -- 249
+- -- 223
+* -- 910
+:= -- 1755
+add.period$ -- 27
+call.type$ -- 21
+change.case$ -- 182
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 783
-empty$ -- 755
-format.name$ -- 160
-if$ -- 1967
+cite$ -- 21
+duplicate$ -- 1122
+empty$ -- 1094
+format.name$ -- 237
+if$ -- 2860
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 178
-newline$ -- 51
-num.names$ -- 32
-pop$ -- 335
+int.to.str$ -- 21
+missing$ -- 254
+newline$ -- 69
+num.names$ -- 44
+pop$ -- 494
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 151
 quote$ -- 0
-skip$ -- 229
+skip$ -- 326
 stack$ -- 0
-substring$ -- 407
-swap$ -- 488
-text.length$ -- 18
+substring$ -- 596
+swap$ -- 682
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 82
 warning$ -- 0
-while$ -- 67
-width$ -- 17
-write$ -- 157
-(There were 7 warnings)
+while$ -- 96
+width$ -- 23
+write$ -- 219

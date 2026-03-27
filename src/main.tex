@@ -63,6 +63,7 @@
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
+    
     The area of spectroscopic analysis is old in the Astronomic Domain. Legacy observational methods recorded stellar spectra on photographic plates. These plates have high historical and scientific value. And are essentials to obtain scientific data from the past of certain astronomical objects.
     Due its characteristics are vulnerable lose of information. Reason for many institutions have launched digitization projects to preserve this heritage.
     
@@ -70,7 +71,7 @@
 
     Are plates to be digitalized what can be relevants but not have enough data to train modern computer vision models for observation detection. With this challenge in mind, we present GSSSP (Generator of Synthetic Scans of Spectroscopic Plates), a tool for generating labeled scans of physical spectroscopic observations. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shape of every observation. Datasets ready for use in training detection models for observations detections in scans of real historical spectroscopic plates.
     
-    For validate the tool we trained a detection model and compared its performance when using only real data, only generated data, and a combination of both. The results show that GSSSP enables the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. The resulting model surpasses the current state of the art for this problem.
+    For validate the tool we trained a detection model and compared its performance when using only real data, only generated data, and a combination of both. The results show that GSSSP enables the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. The resulting model achieves a high performance, with a general mAP of 0.9611 and 0.9900 at IoU=0.75.
     
     \keywords{Generated data, Object detection, Spectroscopic plates}
 \end{abstract}
@@ -141,7 +142,7 @@ To address these preservation challenges, many institutions have launched digiti
 \input{tables/list-colections}
 
 Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion,archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo,simcoe2006,shang2024digitizationastronomicalphotographicplate}. On average, scanning a plate takes approximately $15$--$30$ minutes. 
-Calibration involves extracting relevant features from the plate and usually consists of several steps with varying levels of complexity. In previous work, we presented PlateUNLP, a software tool designed to assist in the calibration process. This tool can speed up calibration using machine learning, signal processing, and metadata-based approaches~\cite{clei2025}. In this work, we improve one stage of the calibration process, which consists of detecting observations in plate scans.
+Calibration involves extracting relevant features from the plate and usually consists of several steps with varying levels of complexity. In previous work, we presented PlateUNLP, a software tool designed to assist in the calibration process. This tool can speed up calibration using machine learning, signal processing, and metadata-based approaches~\cite{ponte2025plateunlpv2}. In this work, we improve one stage of the calibration process, which consists of detecting observations in plate scans.
 
 \section{Detection problem}
 
@@ -156,7 +157,7 @@ Each observation is defined as a bounding box enclosing the spectrum and its cor
     }\label{fig:observation_detection_sample}
 \end{figure}
 
-In previous work, we presented a YOLO-based detector~\cite{anteriordetectordeobservaciones} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations.
+In previous work, we presented a YOLO-based detector~\cite{ronchetti2023software} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations.
 
 The predicted bounding boxes often do not align well with the actual boundaries of the observations. This issue is particularly problematic for subsequent calibration steps, as it can lead to the inclusion of unwanted background or the exclusion of relevant parts of the spectrum. For example, if the predicted bounding box cuts off a portion of the comparison lamp, it can cause errors in wavelength calibration, which relies on accurately capturing the lamp's spectral lines.
 
@@ -205,13 +206,13 @@ The generator provides a high degree of parameterization, allowing control over 
 
 All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically. The generated images also can reproduce extreme cases what are present in real plates but rare cases, such as plates with many observations, plates with observations that are very close to each other, or plates with one observation what occupies almost all of the plate. This variability allows the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning.
 
-The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO annotation scheme~\cite{citaYOLO}. This means that the coordinates of each observation are expressed as normalized values between 0 and 1.
+The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO annotation scheme~\cite{redmon2016you}. This means that the coordinates of each observation are expressed as normalized values between 0 and 1.
 
 \begin{lstlisting}
     <class_id> <x_center> <y_center> <width> <height>
 \end{lstlisting}
 
-\textit{<class\_id>} represents the detection class. Since only one class (observations) is considered, its value is always 0. \textit{<x\_center>} and \textit{<y\_center>} correspond to the normalized coordinates of the bounding box center, while \textit{<width>} and \textit{<height>} represent its normalized dimensions. All values except \textit{<class\_id>} are expressed in the range $[0,1]$. Figure~\ref{fig:example_generation} shows examples of these annotations.
+\textit{<class\_id>} represents the detection class. Since only one class (observations) is considered, its value is always 0.\@ \textit{<x\_center>} and \textit{<y\_center>} correspond to the normalized coordinates of the bounding box center, while \textit{<width>} and \textit{<height>} represent its normalized dimensions. All values except \textit{<class\_id>} are expressed in the range $[0,1]$. Figure~\ref{fig:example_generation} shows examples of these annotations.
 
 \subsection{Available Data}
 
@@ -226,13 +227,13 @@ Each dataset was divided into training and test sets using an 80/20 split:
 
 \section{Detection model}
 
-For model construction, the YOLO architecture was used~\cite{yoloreference}. The model was implemented in TensorFlow using the \texttt{keras-cv} library~\cite{kerascvreference}. A lightweight version of YOLO, \textit{yolo\_v8\_s}, was selected for the experiments.
+For model construction, the YOLO architecture was used~\cite{redmon2016you}. The model was implemented in TensorFlow using the \texttt{keras-cv} library~\cite{kerascv}. A lightweight version of YOLO, \textit{yolo\_v8\_n}, was selected for the experiments.
 
 An initial model was trained using only real data in order to establish a baseline performance. This model was then evaluated on both real and generated datasets. If similar performance is obtained on both datasets, this indicates that the generated images exhibit patterns of comparable complexity to the real data.
 
 Additionally, a model was trained using only generated data and evaluated on both real and generated datasets. After, this model was fine-tuned using real data to obtain a final model, which was evaluated on the real dataset.
 
-To evaluate the model performance, Mean Average Precision (mAP) was used. This is a standard evaluation metric for object detection, computed from the precision–recall curve using a defined Intersection over Union (IoU) threshold~\cite{mapreference,ioureference}. 
+To evaluate the model performance, Mean Average Precision (mAP) was used. This is a standard evaluation metric for object detection, computed from the precision–recall curve using a defined Intersection over Union (IoU) threshold~\cite{everingham2010pascal,lin2014microsoft}. 
 
 IoU measures the overlap between the predicted bounding box and the ground truth bounding box. Its value ranges from 0 (no overlap) to 1 (perfect overlap).
 
@@ -244,7 +245,9 @@ The notation $mAP[IoU=X]$ indicates that the mAP is calculated considering predi
 
 The re images capture part of the complexity of results in Table~\ref{tab:results} show that the GSSSP tool can generate well-labeled synthetic scans of spectroscopic plates. The generatedl images, and their randomness allows models to be prepared for plates containing many observations with different spectral positions and shapes.
 
-A relevant beheavior is that a small dataset of real scans does not provide sufficient spatial variability in the positions and shapes of observations. This limitation prevents the model from accurately fitting bounding boxes, which negatively affects performance at higher IoU thresholds. For this reason, models trained only on real data and those trained on only generated data achieve similar performance at $mAP[IoU=0.50]$. However, the model trained on generated data performs better at $mAP[IoU=0.75]$. This indicates that the synthetic data provides greater variability, allowing the model to predict bounding boxes with higher precision compared to a model trained only on the limited real dataset.
+A relevant beheavior is that a small dataset of real scans does not provide sufficient spatial variability in the positions and shapes of observations. This limitation prevents the model from accurately fitting bounding boxes, which negatively affects performance at higher IoU thresholds. The model trained only real data achieves a good performance but have poor performance to generalize over generated data, which indicates that the model is overfitting to the limited training data and fails to capture the underlying patterns of the observations. For other side, the model trained only on generated data achieves good performance on the generated test set and maintain a decent performance on the real test set. This indicates that the generated data provides a strong generalization basis, allowing the model to learn the general visual patterns of this type of plate. However, since the generated data does not capture all the complexity of real plates, the model's performance on real data is limited.
+
+%For this reason, models trained only on real data and those trained on only generated data achieve similar performance at $mAP[IoU=0.50]$. However, the model trained on generated data performs better at $mAP[IoU=0.75]$. This indicates that the synthetic data provides greater variability, allowing the model to predict bounding boxes with higher precision compared to a model trained only on the limited real dataset.
 
 Finally, fine-tuning the model pretrained on generated data with real training data allows the combination of the spatial variability provided by the generator with the complex patterns present in real images. This approach achieves the best overall performance, enabling more accurate and precise detection of observations in real spectroscopic plates. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained using the fine-tuned model.
 

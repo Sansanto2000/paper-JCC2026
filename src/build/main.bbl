@@ -3,6 +3,13 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\doi}[1]{https://doi.org/#1}
 
+\bibitem{ponte2025plateunlpv2}
+Ahón, S.A.P., Seery, J.M., Pereyra, L., Iannuzzi, M., Quiroga, F., Ronchetti,
+  F., Aidelman, Y., Hasperué, W., Gamen, R., Cidale, L.: Plateunlp v2:
+  Automating spectral extraction, calibration, and metadata from digitized
+  glass plate. In: 2025 LI Latin American Computer Conference (CLEI). pp.~1--7
+  (2025). \doi{10.1109/CLEI67442.2025.11420714}
+
 \bibitem{archive_foster}
 Arcos, C., Vanzi, L., Vogt, N., Garcia, S., Ortiz, V., Acu{\~n}a, E.: Hidden
   spectra treasures in the foster archive: A pilot study of the be stars
@@ -15,15 +22,29 @@ Enke, H., Tuvikene, T., Groote, D., Edelmann, H., Heber, U.: Archives of
   astronomical plates and their integration into the international virtual
   observatory. Astronomy \& Astrophysics  \textbf{687}, ~A165 (2024)
 
+\bibitem{everingham2010pascal}
+Everingham, M., Van~Gool, L., Williams, C.K., Winn, J., Zisserman, A.: The
+  pascal visual object classes (voc) challenge. International journal of
+  computer vision  \textbf{88}(2),  303--338 (2010)
+
 \bibitem{gray2021observation}
 Gray, D.F.: The observation and analysis of stellar photospheres. Cambridge
   university press (2021)
+
+\bibitem{kerascv}
+{Keras Team}: Kerascv. \url{https://github.com/keras-team/keras-cv} (2023),
+  gitHub repository
 
 \bibitem{kunzmann2009real}
 Kunzmann, B.: Real and virtual heritage--historical astronomical plate archives
   in sonneberg, bamberg and hamburg observatories, the evolution of
   astrophysics and their influence on human knowledge and culture. Monuments
   and Sites  \textbf{18},  304--309 (2009)
+
+\bibitem{lin2014microsoft}
+Lin, T.Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D.,
+  Doll{\'a}r, P., Zitnick, C.L.: Microsoft coco: Common objects in context. In:
+  European conference on computer vision. pp. 740--755. Springer (2014)
 
 \bibitem{meilan2018recuperacion}
 Meilán, N.S.: Recuperación del patrimonio observacional histórico:
@@ -53,11 +74,23 @@ Peralta, R., L{\'o}pez, M., Iannuzzi, M., Aidelman, Y.J., Gamen, R., Cidale,
   espectrogr{\'a}ficas. Epistemolog{\'\i}a e Historia de la Astronom{\'\i}a.
   Volumen 2  \textbf{2},  323--342 (2025)
 
+\bibitem{redmon2016you}
+Redmon, J., Divvala, S., Girshick, R., Farhadi, A.: You only look once:
+  Unified, real-time object detection. In: Proceedings of the IEEE conference
+  on computer vision and pattern recognition. pp. 779--788 (2016)
+
 \bibitem{robert2021naroo}
 Robert, V., Desmars, J., Lainey, V., Arlot, J.E., Perlbarg, A.C., Horville, D.,
   Aboudarham, J., Etienne, C., Gu{\'e}rard, J., Ilovaisky, S., et~al.: The
   naroo digitization center-overview and scientific program. Astronomy \&
   Astrophysics  \textbf{652}, ~A3 (2021)
+
+\bibitem{ronchetti2023software}
+Ronchetti, F., Quiroga, F.M., Pereyra, N., Miranda, J., Ponte~Ah{\'o}n, S.A.,
+  Aidelman, Y.J., Gamen, R.C., Lanzarini, L.C.: Software inteligente para la
+  digitalizaci{\'o}n de placas espectrosc{\'o}picas. In: XXVIII Congreso
+  Argentino de Ciencias de la Computaci{\'o}n (CACIC)(La Rioja, 3 al 6 de
+  octubre de 2022) (2023)
 
 \bibitem{shang2024digitizationastronomicalphotographicplate}
 Shang, Z.J., Yu, Y., Wang, L.L., Yang, M.T., Yang, J., Shen, S.Y., Liu, M., Xu,

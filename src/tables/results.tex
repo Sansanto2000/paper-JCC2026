@@ -2,16 +2,27 @@
     \caption{Results with real, generated and mix data train.}\label{tab:results}
     \begin{tabularx}{\linewidth}{|C|C|C|C|C|}
         \hline
-        data train & data test & $mAP$ & $mAP[IoU=0,5]$ & $mAP[IoU=0,75]$\\
+        data train & data test & mAP & mAP[IoU:0,5] & mAP[IoU:0,75]\\
         \hline
-        \textit{gen-train} & \textit{gen-test} &  &  & \\
-        \textit{real-train} & \textit{gen-test} &  &  & \\
-        \textit{real-train} &  \textit{real-test} & 0.6597 & 0.9114 & 0.6681\\
-        \textit{gen-train} &  \textit{real-test} & 0.6431  & 0.8942 & 0.7675 \\
-        \textit{gen+real-train} & \textit{real-test} & 0.9360 & 1.0000 & 1.0000\\
+        \textit{gen-train} & \textit{gen-test} & 0.9835 & 0.9901 & 0.9901 \\
+        \textit{real-train} & \textit{gen-test} & 0.1268 & 0.4457 & 0.0429 \\
+        \textit{real-train} &  \textit{real-test} & 0.9381 & 0.9999 & 0.9683\\
+        \textit{gen-train} &  \textit{real-test} & 0.7544  & 0.9760 & 0.8724 \\
+        \textit{gen+real-train} & \textit{real-test} & \textbf{0.9611} & \textbf{1.0000} & \textbf{0.9900}\\
         \hline
     \end{tabularx}
 \end{table}
+
+ 
+
+
+
+ 
+
+
+
+
+
 
 % \begin{table}
 %     \caption{Results with real, generated and mix data train.}\label{tab:results}
