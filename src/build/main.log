@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  27 MAR 2026 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  27 MAR 2026 13:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,48 +504,49 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 <images/glass-plate.png, id=36, 546.3612pt x 199.10385pt>
 File: images/glass-plate.png Graphic file (type png)
 <use images/glass-plate.png>
-Package pdftex.def Info: images/glass-plate.png  used on input line 89.
+Package pdftex.def Info: images/glass-plate.png  used on input line 87.
 (pdftex.def)             Requested size: 347.12354pt x 126.4994pt.
-<images/defecto_rayon.png, id=46, 441.65pt x 613.29124pt>
+ [2 <./images/glass-plate.png>]
+<images/defecto_rayon.png, id=57, 441.65pt x 613.29124pt>
 File: images/defecto_rayon.png Graphic file (type png)
 <use images/defecto_rayon.png>
-Package pdftex.def Info: images/defecto_rayon.png  used on input line 106.
+Package pdftex.def Info: images/defecto_rayon.png  used on input line 104.
 (pdftex.def)             Requested size: 102.44669pt x 142.26378pt.
-<images/defecto_humedad.png, id=47, 201.75375pt x 613.29124pt>
+<images/defecto_humedad.png, id=58, 201.75375pt x 613.29124pt>
 File: images/defecto_humedad.png Graphic file (type png)
 <use images/defecto_humedad.png>
-Package pdftex.def Info: images/defecto_humedad.png  used on input line 112.
+Package pdftex.def Info: images/defecto_humedad.png  used on input line 110.
 (pdftex.def)             Requested size: 46.7995pt x 142.26378pt.
 
-Overfull \hbox (5.14638pt too wide) in paragraph at lines 112--113
+Overfull \hbox (5.14638pt too wide) in paragraph at lines 110--111
  [][] 
  []
 
-<images/defecto_curvo.png, id=48, 181.67876pt x 613.29124pt>
+<images/defecto_curvo.png, id=59, 181.67876pt x 613.29124pt>
 File: images/defecto_curvo.png Graphic file (type png)
 <use images/defecto_curvo.png>
-Package pdftex.def Info: images/defecto_curvo.png  used on input line 118.
+Package pdftex.def Info: images/defecto_curvo.png  used on input line 116.
 (pdftex.def)             Requested size: 42.14284pt x 142.26378pt.
-<images/defecto_falta_lampara.png, id=49, 108.405pt x 613.29124pt>
+<images/defecto_falta_lampara.png, id=60, 108.405pt x 613.29124pt>
 File: images/defecto_falta_lampara.png Graphic file (type png)
 <use images/defecto_falta_lampara.png>
-Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 124.
+Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 122.
 (pdftex.def)             Requested size: 25.146pt x 142.26378pt.
-<images/defecto_falta_espectro.png, id=50, 152.57pt x 613.29124pt>
+<images/defecto_falta_espectro.png, id=61, 152.57pt x 613.29124pt>
 File: images/defecto_falta_espectro.png Graphic file (type png)
 <use images/defecto_falta_espectro.png>
-Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 130.
+Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 128.
 (pdftex.def)             Requested size: 35.39067pt x 142.26378pt.
 
-Overfull \hbox (0.67621pt too wide) in paragraph at lines 130--131
+Overfull \hbox (0.67621pt too wide) in paragraph at lines 128--129
  [][] 
  []
 
-[2] [3 <./images/glass-plate.png> <./images/defecto_rayon.png (PNG copy)> <./images/defecto_humedad.png> <./images/defecto_curvo.png> <./images/defecto_falta_lampara.png> <./images/defecto_falta_espectro.png>] (tables/list-colections.tex)
-<images/plot_real_labeled.png, id=139, 1073.2095pt x 714.7503pt>
+(tables/list-colections.tex [3 <./images/defecto_rayon.png (PNG copy)> <./images/defecto_humedad.png> <./images/defecto_curvo.png> <./images/defecto_falta_lampara.png> <./images/defecto_falta_espectro.png>])
+<images/plot_real_labeled.png, id=140, 1073.2095pt x 714.7503pt>
 File: images/plot_real_labeled.png Graphic file (type png)
 <use images/plot_real_labeled.png>
-Package pdftex.def Info: images/plot_real_labeled.png  used on input line 154.
+Package pdftex.def Info: images/plot_real_labeled.png  used on input line 152.
 (pdftex.def)             Requested size: 347.12354pt x 231.17867pt.
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -554,20 +555,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/plot_generated_labeled.png, id=173, 1073.2095pt x 714.7503pt>
 File: images/plot_generated_labeled.png Graphic file (type png)
 <use images/plot_generated_labeled.png>
-Package pdftex.def Info: images/plot_generated_labeled.png  used on input line 180.
+Package pdftex.def Info: images/plot_generated_labeled.png  used on input line 178.
 (pdftex.def)             Requested size: 347.12354pt x 231.17867pt.
  [6]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 212.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 210.
  (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 212.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 210.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./images/plot_generated_labeled.png>]
-Overfull \hbox (0.32039pt too wide) in paragraph at lines 238--239
+Overfull \hbox (0.32039pt too wide) in paragraph at lines 236--237
 []\OT1/cmr/m/n/10 IoU mea-sures the over-lap be-tween the pre-dicted bound-ing box and the ground
  []
 
@@ -575,7 +576,7 @@ Overfull \hbox (0.32039pt too wide) in paragraph at lines 238--239
 <images/test_predictions.png, id=221, 857.1222pt x 570.933pt>
 File: images/test_predictions.png Graphic file (type png)
 <use images/test_predictions.png>
-Package pdftex.def Info: images/test_predictions.png  used on input line 256.
+Package pdftex.def Info: images/test_predictions.png  used on input line 254.
 (pdftex.def)             Requested size: 347.12354pt x 231.2266pt.
  (c:\Repositorios\paper-JCC2026\src\build\main.bbl [9]
 Underfull \hbox (badness 10000) in paragraph at lines 66--70
@@ -613,7 +614,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,1074b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on c:\Repositorios\paper-JCC2026\src\build\main.pdf (11 pages, 4421345 bytes).
+Output written on c:\Repositorios\paper-JCC2026\src\build\main.pdf (11 pages, 4421248 bytes).
 PDF statistics:
  337 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 500000)
