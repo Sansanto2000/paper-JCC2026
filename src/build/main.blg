@@ -5,39 +5,41 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: splncs04.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
+Warning--entry type for "yolo26_ultralytics" isn't style-file defined
+--line 206 of file bibliography.bib
 You've used 21 entries,
             2850 wiz_defined-function locations,
-            734 strings with 9970 characters,
-and the built_in function-call counts, 13432 in all, are:
-= -- 1026
-> -- 601
+            734 strings with 9990 characters,
+and the built_in function-call counts, 13451 in all, are:
+= -- 1025
+> -- 606
 < -- 23
-+ -- 249
-- -- 223
-* -- 910
-:= -- 1755
-add.period$ -- 27
++ -- 251
+- -- 225
+* -- 916
+:= -- 1758
+add.period$ -- 26
 call.type$ -- 21
 change.case$ -- 182
 chr.to.int$ -- 0
 cite$ -- 21
-duplicate$ -- 1122
-empty$ -- 1094
-format.name$ -- 237
-if$ -- 2860
+duplicate$ -- 1121
+empty$ -- 1093
+format.name$ -- 240
+if$ -- 2861
 int.to.chr$ -- 0
 int.to.str$ -- 21
 missing$ -- 254
 newline$ -- 69
 num.names$ -- 44
-pop$ -- 494
+pop$ -- 497
 preamble$ -- 1
-purify$ -- 151
+purify$ -- 152
 quote$ -- 0
-skip$ -- 326
+skip$ -- 328
 stack$ -- 0
-substring$ -- 596
-swap$ -- 682
+substring$ -- 594
+swap$ -- 681
 text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
@@ -45,4 +47,5 @@ type$ -- 82
 warning$ -- 0
 while$ -- 96
 width$ -- 23
-write$ -- 219
+write$ -- 217
+(There was 1 warning)

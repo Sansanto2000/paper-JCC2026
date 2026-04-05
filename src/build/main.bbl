@@ -31,9 +31,9 @@ Everingham, M., Van~Gool, L., Williams, C.K., Winn, J., Zisserman, A.: The
 Gray, D.F.: The observation and analysis of stellar photospheres. Cambridge
   university press (2021)
 
-\bibitem{kerascv}
-{Keras Team}: Kerascv. \url{https://github.com/keras-team/keras-cv} (2023),
-  gitHub repository
+\bibitem{yolo26_ultralytics}
+Jocher, G., Qiu, J.: Ultralytics yolo26 (2026),
+  \url{https://github.com/ultralytics/ultralytics}
 
 \bibitem{kunzmann2009real}
 Kunzmann, B.: Real and virtual heritage--historical astronomical plate archives
