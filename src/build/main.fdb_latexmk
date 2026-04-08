@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/main"] 1775674251.42713 "build/main.aux" "build/main.bbl" "build/main" 1775674253.63165 0
+["bibtex build/main"] 1775674251.42713 "build/main.aux" "build/main.bbl" "build/main" 1775675151.74063 0
   "./bibliography.bib" 1775674250.89612 8633 8f15bfed800e95a516ce39922df93338 ""
   "./splncs04.bst" 1773404788.9944 32146 ee21ae2a29028dc8ad842a97200982c7 ""
-  "build/main.aux" 1775674253.162 8480 238e5715ee5c10f492a1a19228812341 "pdflatex"
+  "build/main.aux" 1775675151.26324 8480 238e5715ee5c10f492a1a19228812341 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1775674251.7587 "/Users/s.a.p.a/Documents/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775674253.6318 0
+["pdflatex"] 1775675149.78714 "/Users/s.a.p.a/Documents/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775675151.74081 0
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1764341541.1991 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm" 1764341539.15521 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm" 1764341539.15559 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -79,7 +79,7 @@
   "/Library/Application Support/MiKTeX/texmfs/install/tex/latex/trimspaces/trimspaces.sty" 1764341568.10422 1380 971a51b00a14503ddf754cab24c3f209 ""
   "/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty" 1764341568.77653 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xcolor/xcolor.sty" 1764341568.84496 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "/Users/s.a.p.a/Documents/Repositorios/paper-JCC2026/src/main.tex" 1775674186.16707 29827 3ba4c716a195e332eeabb9b7df1e0c74 ""
+  "/Users/s.a.p.a/Documents/Repositorios/paper-JCC2026/src/main.tex" 1775675149.22057 29798 cbe978d2ecc94a90227292b97c4926b6 ""
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1775411439.12966 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1775401715.33626 11548 09670e14c2677b669705eee8151aa24b ""
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1766499587.86264 13336232 20a469ee11624e9ec8e694a480883f3d ""
@@ -105,9 +105,9 @@
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1764342041.07678 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/install/tex/latex/threeparttable/threeparttable.sty" 1766498667.85764 13506 a4e71a27db1a69b6fabada5beebf0844 ""
   "/Users/s.a.p.a/Library/Application Support/MiKTeX/texmfs/install/tex/latex/threeparttablex/threeparttablex.sty" 1766498666.84052 4806 f47a86719933c0946f57de994330d55b ""
-  "build/main.aux" 1775674253.162 8480 238e5715ee5c10f492a1a19228812341 "pdflatex"
+  "build/main.aux" 1775675151.26324 8480 238e5715ee5c10f492a1a19228812341 "pdflatex"
   "build/main.bbl" 1775674251.63898 5806 b8446226260c3f0fb618a59fdff24907 "bibtex build/main"
-  "build/main.out" 1775674253.16295 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
+  "build/main.out" 1775675151.26481 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
   "images/defecto_curvo.png" 1773404788.99254 31758 111b23b6b6e2a9809f9cf234b096b8db ""
   "images/defecto_falta_espectro.png" 1773404788.99264 15540 40317de5f74bc17f81a2e80b5574d3c8 ""
   "images/defecto_falta_lampara.png" 1773404788.99283 9402 5739d541ee04a863f385095b5ca5f9c9 ""
@@ -118,7 +118,7 @@
   "images/plot_real_labeled.png" 1775175379.52652 1187272 d02938bffcc9b5e723e37c45ef7f716c ""
   "images/test_predictions.png" 1775175379.52895 873360 70193f3067cca8938a97f0e9ae2d2cb8 ""
   "llncs.cls" 1773404788.99336 42249 b08ec23e994470d7d8fc268d245cf555 ""
-  "main.tex" 1775674186.16707 29827 3ba4c716a195e332eeabb9b7df1e0c74 ""
+  "main.tex" 1775675149.22057 29798 cbe978d2ecc94a90227292b97c4926b6 ""
   "tables/list-colections.tex" 1775175379.52965 1214 a13e37ba06a4c55b64ca2837487ac324 ""
   "tables/results.tex" 1775674020.21801 1920 ff878472598ff9bd5bb80c3774777faa ""
   (generated)
