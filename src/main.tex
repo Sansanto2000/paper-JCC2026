@@ -79,8 +79,7 @@
 Spectroscopy constitutes a fundamental tool for the physical study of astronomical objects. Through the analysis of electromagnetic radiation received, absorbed, or reflected by an object, it is possible to infer several of its physical properties. For example, spectroscopy can reveal 
 the chemical composition, temperature, and radial velocity of astronomical sources. This technique enables the study of celestial bodies beyond their position or apparent brightness in the sky~\cite{gray2021observation}.
 
-In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. The plates captured during this time have high historical and scientific value, as they contain information about the past of certain astronomical objects, 
-some highly desired, especially those of objects in the southern hemisphere sky, which were less observed than those of the northern hemisphere in these years.
+In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. The plates captured during this time have high historical and scientific value, as they contain information about the past of certain astronomical objects, some of them are highly valuable, especially those corresponding to objects in the southern hemisphere, which were less observed than those of the northern hemisphere in these years.
 Today, many of these plates are preserved in their original institutions~\cite{kunzmann2009real}. Figure~\ref{fig:glass_plate} shows a spectroscopic glass plate containing two observations on its surface.
 
 \begin{figure}[htb!]
@@ -158,19 +157,18 @@ Each observation is defined as a bounding box enclosing the spectrum and its cor
 
 In previous work, we presented a YOLO-based detector~\cite{ronchetti2023software} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations.
 
-The predicted bounding boxes frequently misalign with the true observation boundaries, which can negatively impact downstream calibration steps. In particular, incomplete observations detections may lead to inaccuracies in wavelength calibration, thereby compromising the analysis of the extracted spectral information. 
+The predicted bounding boxes frequently misalign with the true observation boundaries, which can negatively impact downstream calibration steps. In particular, incomplete observation detections may lead to inaccuracies in wavelength calibration, thereby compromising the analysis of the extracted spectral information. 
 
 \subsection{Evaluation metrics}
 
-One metric that evidences this behavior is the mAP at different IoU thresholds. IoU (intersection over union, equation~\ref{eq:iou}) measures the overlap between the predicted bonding box and the ground truth bounding box. Its values range from 0 (no overlap) to 1 (perfect overlap).
+One metric that evidences this behavior is the mAP at different IoU thresholds. IoU (intersection over union, equation~\ref{eq:iou}) measures the overlap between the predicted bounding box and the ground truth bounding box. Its values range from 0 (no overlap) to 1 (perfect overlap).
 
 \begin{equation}
     IoU = \frac{Area\ of\ Overlap}{Area\ of\ Union}
     \label{eq:iou}
 \end{equation}
 
-The mAP (mean Average Precision) considers corrects detections those with IoU greater than or equal to a specific threshold. Then, a precision-recall curve is generated and the area under it is computed. This is known as AP (Average Precision, equation~\ref{eq:ap}). When there are multiple classes, the value is averaged; this is mAP (equation~\ref{eq:map}).
-The mean Average Precision (mAP) considers a detection to be correct if its IoU is greater than or equal to a given threshold. Based on this criterion, a precision–-recall curve is constructed, and the area under this curve defines the Average Precision (AP) (Equation~\ref{eq:ap}). When multiple classes are involved, AP is computed for each class and then averaged to obtain the mAP (Equation~\ref{eq:map}). mAP values range from 0 to 1, with higher values indicating better performance in both detection and localization accuracy~\cite{everingham2010pascal,lin2014microsoft}.
+The mean Average Precision (mAP) considers a detection to be correct if its IoU is greater than or equal to a given threshold. Based on this criterion, a precision-recall curve is constructed, and the area under this curve defines the Average Precision (AP) (Equation~\ref{eq:ap}). When multiple classes are involved, AP is computed for each class and then averaged to obtain the mAP (Equation~\ref{eq:map}). mAP values range from 0 to 1, with higher values indicating better detection and localization performance~\cite{everingham2010pascal,lin2014microsoft}.
 
 \begin{equation}
     AP = \int_{0}^{1} p(r) dr
@@ -198,7 +196,7 @@ In this work, we present a tool to mitigate the issue of limited training data. 
 
 G3SP\footnote{\href{https://github.com/Sansanto2000/G3SP}{G3SP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shape of every observation.
 
-The tool enable a fine-grained control over the characteristics of the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured include:
+The tool enables a fine-grained control over the characteristics of the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured include:
 \begin{itemize}
     \item Height and width of the canvas.
     \item Background color.
@@ -218,7 +216,7 @@ The tool enable a fine-grained control over the characteristics of the generated
     \item Number, intensity, and length of horizontal light defects.
 \end{itemize}
 
-All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically. The generated images also can reproduce extreme cases that are present in real plates but rare cases, such as plates with many observations, plates with observations that are very close to each other, or plates with one observation that occupies almost all of the plate. This variability allows the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
+All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the expected anatomical structure of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically. The generated images can also reproduce extreme cases that are present in real plates but are rare cases, such as plates with many observations, plates with observations that are very close to each other, or plates with one observation that occupies almost all of the plate. This variability allows the model to learn the general visual patterns of this type of plate, providing a strong generalization basis for subsequent fine-tuning. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
 
 \begin{figure}[htb!]
     \centering
@@ -259,13 +257,13 @@ The number of training epochs varied depending on the dataset: models trained on
 
 Data augmentation included HSV color variations, random scaling (±50\%), horizontal flipping (50\% probability), translation (10\%), and mosaic augmentation enabled during early training.
 
-The training process leveraged automatic mixed precision (AMP) and was executed on a single \textit{NVIDIA GeForce RTX 3090} GPU with 24 GB of VRAM, ensuring efficient computation and memory usage.
+The training process leveraged automatic mixed precision (AMP) and was executed on an \textit{NVIDIA GeForce RTX 3090} GPU with 24 GB of VRAM, ensuring efficient computation and memory usage.
 
 The trained model allows up to 300 detections per image. Unlike traditional object detectors, the end-to-end architecture of \textit{yolo\_v26\_n} eliminates the need for non-maximum suppression (NMS), as redundant detections are resolved internally by the model.
 
 \subsection{Experiments}
 
-Five training evaluations were conducted to evaluate the performance of the proposed approach. Each experiment involved training a model under different train data and test data.
+Five training evaluations were conducted to evaluate the performance of the proposed approach. Each experiment involved training a model under different training and testing data.
 
 An initial model was trained using only real data in order to establish a baseline performance. This model was then evaluated on both real and generated datasets. If similar performance is obtained on both datasets, this indicates that the generated images exhibit patterns of comparable complexity to the real data.
 
@@ -273,7 +271,7 @@ With the baseline established, a second model was trained using only generated d
 
 Finally, a third model was trained using a combination of real and generated data. Specifically, the model was first trained on generated data and subsequently fine-tuned using real data. This approach aims to leverage the strengths of both datasets, providing a more diverse training set that captures the variability present in real plates while benefiting from the large volume of synthetic samples. The performance of this model was evaluated only on real data.
 
-To measure test performance, the mAP at different IoU thresholds was used ($mAP_{50}$ and $mAP_{50-95}$.). This metric allows us to evaluate both the model's ability to detect the presence of observations and its precision in fitting their boundaries. Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained with the model trained on generated data, on real data and trained with generated data and fine-tuned using a limited set of real images.
+To measure test performance, the mAP at different IoU thresholds was used ($mAP_{50}$ and $mAP_{50-95}$). This metric allows us to evaluate both the model's ability to detect the presence of observations and its precision in fitting their boundaries. Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained with the model trained on generated data, on real data and trained with generated data and fine-tuned using a limited set of real images.
 
 \input{tables/results.tex}
 
@@ -287,7 +285,7 @@ To measure test performance, the mAP at different IoU thresholds was used ($mAP_
 
 \subsection{Analysis}
 
-The first two evaluations in Table~\ref{tab:results} show that the model trained on real data achieves excellent performance in detecting and segmenting observations, with a general detection score ($mAP[50]$) of 0.992 and a more stringent metric ($mAP[50-95]$) of 0.895. However, when the same model is evaluated on generated data, its performance drops significantly, reaching 0.662 and 0.419, respectively.
+The first two evaluations in Table~\ref{tab:results} show that the model trained on real data achieves excellent performance in detecting and segmenting observations, with a general detection score ($mAP_{50}$) of 0.992 and a more stringent metric ($mAP_{50-95}$) of 0.895. However, when the same model is evaluated on generated data, its performance drops significantly, reaching 0.662 and 0.419, respectively.
 
 This behavior indicates that the model is overfitting to the limited real training data. Since both the training and testing sets originate from the same real data distribution, they share many characteristics, which facilitates high performance despite overfitting. In contrast, the notable degradation when evaluated on generated data, which follows a different distribution, highlights the poor generalization capability of models trained exclusively on real data. Although data augmentation introduces some variability, it is clearly insufficient to ensure robust generalization.
 
@@ -299,7 +297,7 @@ This strategy achieves the best overall performance, with an $mAP_{50}$ of 0.995
 
 \section{Conclusions}
 
-Given the good performance of models based on generated data with G3SP, we can conclude that the pretraining of the model with generated data for observation detection in spectroscopic plates is a viable approach which allows achieving excellent performance and good generalization capability. This option is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong generalization basis, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving its performance. In this sense, the performance achieved in previous works with only real data augmented was outperformed by this approach.
+Given the good performance of models based on generated data with G3SP, we can conclude that the pretraining of the model with generated data for observation detection in spectroscopic plates is a viable approach for achieving excellent performance and good generalization capability. This option is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong generalization basis, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving its performance. In this sense, the performance achieved in previous works using only augmented real data was outperformed by this approach.
 
 The synthetic spectroscopic plate scan generator presented in this work, G3SP, demonstrates—through the performance of models trained on its data—its ability to capture part of the complex patterns associated with this type of spectroscopic images. By generating realistic and diverse samples, the approach can be generalized and adapted to a wide range of spectroscopic scan scenarios. Its inherent randomness enables models to better handle plates containing multiple observations with varying spectral positions and shapes.
 
