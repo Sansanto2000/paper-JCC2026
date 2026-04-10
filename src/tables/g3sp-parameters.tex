@@ -1,0 +1,88 @@
+\begin{table}
+    \caption{Main parameters of G3SP for synthetic spectroscopic plate generation.}
+    \label{tab:g3sp-parameters}
+    \begin{tabularx}{\linewidth}{|l|X|}
+        \hline
+        \textbf{Parameter} & \textbf{Description} \\
+        \hline
+
+        \multicolumn{2}{|c|}{\textit{Canvas and Global Properties}} \\
+        \hline
+        height\_range, width\_range & Range of canvas dimensions. \\
+        gray\_value\_range & Background gray level. \\
+
+        \hline
+        \multicolumn{2}{|c|}{\textit{Observation Geometry}} \\
+        \hline
+        obs\_width, obs\_height & Size of each observation relative to the canvas. \\
+        angle\_range & Inclination of observations. \\
+        opening\_lamp\_range & Relative size of lamp spectra. \\
+        distance\_between\_components\_range & Spacing between spectral components. \\
+
+        \hline
+        \multicolumn{2}{|c|}{\textit{Observation Distribution}} \\
+        \hline
+        distance\_between\_observations\_range & Spacing between observations. \\
+        cant\_observations\_max & Maximum number of observations. \\
+        noise\_horizontal, noise\_vertical & Positional perturbations. \\
+        target filtering & Random removal of observations (10\% probability). \\
+
+        \hline
+        \multicolumn{2}{|c|}{\textit{Spectral Modeling}} \\
+        \hline
+        n\_peaks & Number of emission peaks. \\
+        n\_absorption\_lines & Number of absorption lines. \\
+        baseline & Base intensity level. \\
+        peak\_spread & Width of emission peaks. \\
+        absorption\_lines\_spread & Width of absorption lines. \\
+        vertical\_noise\_level & Vertical intensity perturbation. \\
+
+        \hline
+        \multicolumn{2}{|c|}{\textit{Noise and Artifacts}} \\
+        \hline
+        gaussian\_std\_range & Gaussian noise level. \\
+        band\_intensity\_range & Horizontal band noise. \\
+        speck\_count\_range, speck\_size\_range & Dust artifacts. \\
+        blur\_kernel\_size\_options & Blur kernel size. \\
+        prob\_edge & Plate edge artifact probability. \\
+        violin\_line\_count & Number of elongated artifacts. \\
+        violin\_intensity & Intensity of elongated artifacts. \\
+        violin\_length\_range & Length of elongated artifacts. \\
+
+        \hline
+        \multicolumn{2}{|c|}{\textit{Output Configuration}} \\
+        \hline
+        resize\_shape & Output resolution. \\
+        batch\_size & Batch size. \\
+        max\_predictions & Maximum annotations per image. \\
+        output\_format & Output label format. \\
+
+        \hline
+    \end{tabularx}
+\end{table}
+
+% \begin{table}
+%     \caption{Some of the parameters of G3SP for generating synthetic scans.}\label{tab:g3sp-parameters}
+%     \begin{tabularx}{\linewidth}{|l|X|}
+%         \hline
+%         \textbf{Parameter} & \textbf{Description} \\
+%         \hline
+%         Height and width of the canvas. \\
+%         Background color. \\
+%         Inclination of observations within the plate. \\
+%         Thickness of each observation component. \\
+%         Distance between spectral components. \\
+%         Distance between observations. \\
+%         Horizontal and vertical deviation of each observation. \\
+%         Number of observations per plate. \\
+%         Number, intensity, and size of emission lines in each observation component. \\
+%         Number, intensity, and size of absorption lines in each observation component. \\
+%         Gaussian noise level. \\
+%         Horizontal band noise level. \\
+%         Number and size of dust stains. \\
+%         Blur level. \\
+%         Probability of adding a plate edge to the image. \\
+%         Number, intensity, and length of horizontal light defects. \\
+%         \hline
+%     \end{tabularx}
+% \end{table}

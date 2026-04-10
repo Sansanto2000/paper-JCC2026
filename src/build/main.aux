@@ -4,14 +4,14 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \@writefile{toc}{\contentsline {title}{G3SP\,: Generator of Synthetic Scans of Spectroscopic Plates for Object Detection}{1}{chapter.1}\protected@file@percent }
 \@writefile{toc}{\authcount {8}}
-\@writefile{toc}{\contentsline {author}{ Santiago Andres Ponte Ah^^c3^^b3n \and Juan Mart^^c3^^adn Seery \and Facundo Quiroga \and Franco Ronchetti \and Yael Aidelman \and Waldo Hasperu^^c3^^a9 \and Roberto Gamen \and Lydia Cidale }{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {author}{ Santiago Andres Ponte Ahón \and Juan Martín Seery \and Facundo Quiroga \and Franco Ronchetti \and Yael Aidelman \and Waldo Hasperué \and Roberto Gamen \and Lydia Cidale }{1}{chapter.1}\protected@file@percent }
 \citation{gray2021observation}
 \citation{kunzmann2009real}
 \citation{niemela1977placa}
 \citation{niemela1977placa}
 \citation{placas_DASCH}
 \citation{peralta2025puesta}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Spectroscopic Data}{2}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Spectroscopic Data}{2}{section.1.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Left, the wrapping includes additional information about each observation. Right, spectroscopic plate \texttt  {A4418} of the astronomical source \texttt  {Zeta Puppis}, captured at the Observatorio Interamericano de Cerro Tololo (Chile) as part of the \texttt  {ReTrOH}~\cite  {niemela1977placa} project. The plate contains two spectroscopic observations. }}{2}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:glass_plate}{{1}{2}{Left, the wrapping includes additional information about each observation. Right, spectroscopic plate \texttt {A4418} of the astronomical source \texttt {Zeta Puppis}, captured at the Observatorio Interamericano de Cerro Tololo (Chile) as part of the \texttt {ReTrOH}~\cite {niemela1977placa} project. The plate contains two spectroscopic observations}{figure.caption.2}{}}
@@ -30,39 +30,41 @@
 \citation{ronchetti2023software}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  Some relevant projects or institutions with collections of spectroscopic plates. (a) It is known that HCO has a collection of spectroscopic plates, but the exact number is unknown. }}{4}{table.caption.4}\protected@file@percent }
 \newlabel{tab:collections}{{1}{4}{Some relevant projects or institutions with collections of spectroscopic plates. (a) It is known that HCO has a collection of spectroscopic plates, but the exact number is unknown}{table.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Detection problem}{4}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Detection problem}{4}{section.1.2}\protected@file@percent }
 \citation{everingham2010pascal,lin2014microsoft}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  The images show examples of real spectroscopic plates. The bounding boxes enclose the regions corresponding to each observation, which consist of the spectrum and its corresponding comparison lamps. If the observation is too large, the delimiting box extends to the edge of the scan, as in the leftmost top image. }}{5}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:observation_detection_sample}{{3}{5}{The images show examples of real spectroscopic plates. The bounding boxes enclose the regions corresponding to each observation, which consist of the spectrum and its corresponding comparison lamps. If the observation is too large, the delimiting box extends to the edge of the scan, as in the leftmost top image}{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Evaluation metrics}{5}{subsection.2.1}\protected@file@percent }
-\newlabel{eq:iou}{{1}{5}{Evaluation metrics}{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Evaluation metrics}{5}{subsection.1.2.1}\protected@file@percent }
+\newlabel{eq:iou}{{1}{5}{Evaluation metrics}{equation.1.2.1}{}}
 \citation{yolo26_ultralytics}
-\newlabel{eq:ap}{{2}{6}{Evaluation metrics}{equation.2}{}}
-\newlabel{eq:map}{{3}{6}{Evaluation metrics}{equation.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Explanation of precision problem}{6}{subsection.2.2}\protected@file@percent }
+\newlabel{eq:ap}{{2}{6}{Evaluation metrics}{equation.1.2.2}{}}
+\newlabel{eq:map}{{3}{6}{Evaluation metrics}{equation.1.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Explanation of precision problem}{6}{subsection.1.2.2}\protected@file@percent }
 \citation{redmon2016you}
-\@writefile{toc}{\contentsline {section}{\numberline {3}G3SP}{7}{section.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Generated plate scans. Rows vary in characteristics such as observation count, shape, and noise. Background gray level increases from left to right, and the number of observations increases from top to bottom. Diagonal images (top-left to bottom-right) show the corresponding labels. }}{8}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:example_generation}{{4}{8}{Generated plate scans. Rows vary in characteristics such as observation count, shape, and noise. Background gray level increases from left to right, and the number of observations increases from top to bottom. Diagonal images (top-left to bottom-right) show the corresponding labels}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}G3SP}{7}{section.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Available Data}{7}{subsection.1.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Main parameters of G3SP for synthetic spectroscopic plate generation.}}{8}{table.caption.6}\protected@file@percent }
+\newlabel{tab:g3sp-parameters}{{2}{8}{Main parameters of G3SP for synthetic spectroscopic plate generation}{table.caption.6}{}}
 \citation{redmon2016you}
 \citation{yolo26_ultralytics}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Available Data}{9}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Detection model}{9}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experiments}{9}{subsection.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Results with real, generated and mixed training data.}}{10}{table.caption.7}\protected@file@percent }
-\newlabel{tab:results}{{2}{10}{Results with real, generated and mixed training data}{table.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Analysis}{10}{subsection.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries. }}{11}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:real_prediction_sample}{{5}{11}{Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Generated plate scans. Rows vary in characteristics such as observation count, shape, and noise. Background gray level increases from left to right, and the number of observations increases from top to bottom. Diagonal images (top-left to bottom-right) show the corresponding labels. }}{9}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:example_generation}{{4}{9}{Generated plate scans. Rows vary in characteristics such as observation count, shape, and noise. Background gray level increases from left to right, and the number of observations increases from top to bottom. Diagonal images (top-left to bottom-right) show the corresponding labels}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Detection model}{9}{section.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experiments}{10}{subsection.1.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Results with real, generated and mixed training data.}}{11}{table.caption.8}\protected@file@percent }
+\newlabel{tab:results}{{3}{11}{Results with real, generated and mixed training data}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Analysis}{11}{subsection.1.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries. }}{12}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:real_prediction_sample}{{5}{12}{Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries}{figure.caption.9}{}}
 \bibstyle{splncs04}
 \bibdata{bibliography}
 \bibcite{ponte2025plateunlpv2}{1}
 \bibcite{archive_foster}{2}
 \bibcite{placas_APPLAUSE}{3}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{12}{section.5}\protected@file@percent }
 \bibcite{everingham2010pascal}{4}
 \bibcite{gray2021observation}{5}
 \bibcite{yolo26_ultralytics}{6}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{13}{section.1.5}\protected@file@percent }
 \bibcite{kunzmann2009real}{7}
 \bibcite{lin2014microsoft}{8}
 \bibcite{meilan2018recuperacion}{9}
@@ -78,4 +80,4 @@
 \bibcite{placas_WFPDB}{19}
 \bibcite{placas_WFPDB_2}{20}
 \bibcite{placas_DASCH}{21}
-\gdef \@abspage@last{14}
+\gdef \@abspage@last{15}
