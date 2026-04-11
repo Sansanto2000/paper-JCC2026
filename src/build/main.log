@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  9 APR 2026 23:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.24)  11 APR 2026 00:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,75 +474,75 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count332
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 65.
+(Font)              <7> on input line 64.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 65.
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 65.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 65.
+(Font)              <5> on input line 64.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 64.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 64.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 65.
+(Font)              for symbol `textbraceleft' on input line 64.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 65.
+(Font)              <9> on input line 64.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 65.
+(Font)              <6> on input line 64.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 65.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 64.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 1.66672pt
-(hyperref)                removed on input line 65.
+(hyperref)                removed on input line 64.
 
 [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (4.42703pt too wide) in paragraph at lines 74--75
+Overfull \hbox (4.42703pt too wide) in paragraph at lines 78--79
 \OT1/cmr/bx/n/9 Keywords:\OT1/cmr/m/n/9 Generated data, Ob-ject de-tec-tion, Spec-tro-scopic plates, Syn-
  []
 
 <images/glass-plate.png, id=36, 546.3612pt x 199.10385pt>
 File: images/glass-plate.png Graphic file (type png)
 <use images/glass-plate.png>
-Package pdftex.def Info: images/glass-plate.png  used on input line 87.
+Package pdftex.def Info: images/glass-plate.png  used on input line 91.
 (pdftex.def)             Requested size: 347.12354pt x 126.4994pt.
 [2 <./images/glass-plate.png>]
 <images/defecto_rayon.png, id=59, 441.65pt x 613.29124pt>
 File: images/defecto_rayon.png Graphic file (type png)
 <use images/defecto_rayon.png>
-Package pdftex.def Info: images/defecto_rayon.png  used on input line 104.
+Package pdftex.def Info: images/defecto_rayon.png  used on input line 108.
 (pdftex.def)             Requested size: 102.44669pt x 142.26378pt.
 <images/defecto_humedad.png, id=60, 201.75375pt x 613.29124pt>
 File: images/defecto_humedad.png Graphic file (type png)
 <use images/defecto_humedad.png>
-Package pdftex.def Info: images/defecto_humedad.png  used on input line 110.
+Package pdftex.def Info: images/defecto_humedad.png  used on input line 114.
 (pdftex.def)             Requested size: 46.7995pt x 142.26378pt.
 
-Overfull \hbox (5.14638pt too wide) in paragraph at lines 110--111
+Overfull \hbox (5.14638pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
 <images/defecto_curvo.png, id=61, 181.67876pt x 613.29124pt>
 File: images/defecto_curvo.png Graphic file (type png)
 <use images/defecto_curvo.png>
-Package pdftex.def Info: images/defecto_curvo.png  used on input line 116.
+Package pdftex.def Info: images/defecto_curvo.png  used on input line 120.
 (pdftex.def)             Requested size: 42.14284pt x 142.26378pt.
 <images/defecto_falta_lampara.png, id=62, 108.405pt x 613.29124pt>
 File: images/defecto_falta_lampara.png Graphic file (type png)
 <use images/defecto_falta_lampara.png>
-Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 122.
+Package pdftex.def Info: images/defecto_falta_lampara.png  used on input line 126.
 (pdftex.def)             Requested size: 25.146pt x 142.26378pt.
 <images/defecto_falta_espectro.png, id=63, 152.57pt x 613.29124pt>
 File: images/defecto_falta_espectro.png Graphic file (type png)
 <use images/defecto_falta_espectro.png>
-Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 128.
+Package pdftex.def Info: images/defecto_falta_espectro.png  used on input line 132.
 (pdftex.def)             Requested size: 35.39067pt x 142.26378pt.
 
-Overfull \hbox (0.67621pt too wide) in paragraph at lines 128--129
+Overfull \hbox (0.67621pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
@@ -550,38 +550,38 @@ Overfull \hbox (0.67621pt too wide) in paragraph at lines 128--129
 <images/plot_real_labeled.png, id=141, 1073.2095pt x 714.7503pt>
 File: images/plot_real_labeled.png Graphic file (type png)
 <use images/plot_real_labeled.png>
-Package pdftex.def Info: images/plot_real_labeled.png  used on input line 152.
+Package pdftex.def Info: images/plot_real_labeled.png  used on input line 156.
 (pdftex.def)             Requested size: 347.12354pt x 231.17867pt.
  [4] [5 <./images/plot_real_labeled.png>] [6] (tables/g3sp-parameters.tex)
-<images/generated_images.png, id=198, 789.95125pt x 675.52374pt>
+<images/generated_images.png, id=200, 2734.215pt x 2613.765pt>
 File: images/generated_images.png Graphic file (type png)
 <use images/generated_images.png>
-Package pdftex.def Info: images/generated_images.png  used on input line 208.
-(pdftex.def)             Requested size: 347.12354pt x 296.83968pt.
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 217.
- (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 217.
-LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 220.
- [7] [8] [9 <./images/generated_images.png>] [10] (tables/results.tex)
-<images/test_predictions.png, id=245, 857.1222pt x 570.933pt>
+Package pdftex.def Info: images/generated_images.png  used on input line 212.
+(pdftex.def)             Requested size: 347.12354pt x 331.82481pt.
+<images/comparacion.png, id=206, 6175.07pt x 2782.395pt>
+File: images/comparacion.png Graphic file (type png)
+<use images/comparacion.png>
+Package pdftex.def Info: images/comparacion.png  used on input line 233.
+(pdftex.def)             Requested size: 347.12354pt x 156.40744pt.
+ [7] [8]
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [9 <./images/generated_images.png>] [10 <./images/comparacion.png>] (tables/results.tex)
+<images/test_predictions.png, id=246, 857.1222pt x 570.933pt>
 File: images/test_predictions.png Graphic file (type png)
 <use images/test_predictions.png>
-Package pdftex.def Info: images/test_predictions.png  used on input line 273.
+Package pdftex.def Info: images/test_predictions.png  used on input line 274.
 (pdftex.def)             Requested size: 347.12354pt x 231.2266pt.
 
-Overfull \hbox (2.47205pt too wide) in paragraph at lines 281--282
+Overfull \hbox (2.47205pt too wide) in paragraph at lines 282--283
 \OT1/cmr/m/n/10 gen-eral de-tec-tion score ($\OML/cmm/m/it/10 mAP[]$\OT1/cmr/m/n/10 ) of 0.992 and a more strin-gent met-ric ($\OML/cmm/m/it/10 mAP[]$\OT1/cmr/m/n/10 )
  []
 
-[11]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <./images/test_predictions.png>]
-Overfull \hbox (1.00214pt too wide) in paragraph at lines 295--296
+ [11] [12 <./images/test_predictions.png>]
+Overfull \hbox (1.00214pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 G3SP, demon-strates|through the per-for-mance of mod-els trained on its data|its
  []
 
@@ -613,17 +613,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A13337CBFB948ADBD25F5AB9317069F6;468.
  ) 
 Here is how much of TeX's memory you used:
- 13100 strings out of 474486
- 209908 string characters out of 5743754
- 1945542 words of memory out of 5000000
- 35155 multiletter control sequences out of 15000+600000
+ 12824 strings out of 474486
+ 207687 string characters out of 5743754
+ 1944542 words of memory out of 5000000
+ 34883 multiletter control sequences out of 15000+600000
  563079 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,903b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,903b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\santi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on c:\Repositorios\paper-JCC2026\src\build\main.pdf (15 pages, 3268822 bytes).
+Output written on c:\Repositorios\paper-JCC2026\src\build\main.pdf (15 pages, 7728547 bytes).
 PDF statistics:
  386 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -61,9 +61,11 @@
 }
 %
 \maketitle              % typeset the header of the contribution
+\setcounter{footnote}{0}
 %
 \begin{abstract}
-    Spectroscopic analysis has a long tradition in astronomy, where stellar spectra were historically recorded on photographic plates. These plates constitute a valuable scientific and historical archive, enabling the study of long-term variability in astronomical objects. However, they are prone to degradation and information loss, which has motivated large-scale digitization efforts.
+
+    Spectroscopic analysis has a long tradition in astronomy, where stellar spectra were historically recorded on photographic plates. These plates constitute a valuable scientific and historical archive, enabling the study of long-term variability in astronomical objects. However, they are prone to degradation and information loss\textcolor{red}{, and the information they contain is difficult to access and process}, which has motivated large-scale digitization efforts.
     
     Despite ongoing initiatives, many plates remain undigitized, and the digitization process itself is time-consuming. Moreover, several downstream tasks required for scientific analysis—such as the detection and localization of spectral observations—are still performed manually. This step is particularly critical, as it is both labor-intensive and error-prone, creating a bottleneck in the data processing pipeline.
 
@@ -71,7 +73,9 @@
     
     To evaluate the usefulness of the proposed approach, we train an object detection model under three settings: using only real data, synthetic data, and their combination. Our results show that synthetic data generated with G3SP capture the underlying visual structure of spectroscopic plates and provide a strong basis for model generalization. In particular, models trained on synthetic data achieve competitive performance and further improve when combined with real data, reaching up to 0.995 $mAP_{50}$ and 0.95 $mAP_{50-95}$.
     
-    \keywords{Generated data, Object detection, Spectroscopic plates, Synthetic data}
+    \keywords{
+        Generated data, Object detection, Spectroscopic plates, Synthetic data
+    }
 \end{abstract}
 
 \section{Spectroscopic Data}
@@ -79,7 +83,7 @@
 Spectroscopy constitutes a fundamental tool for the physical study of astronomical objects. Through the analysis of electromagnetic radiation received, absorbed, or reflected by an object, it is possible to infer several of its physical properties. For example, spectroscopy can reveal 
 the chemical composition, temperature, and radial velocity of astronomical sources. This technique enables the study of celestial bodies beyond their position or apparent brightness in the sky~\cite{gray2021observation}.
 
-In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. The plates captured during this time have high historical and scientific value, as they contain information about astronomical objects in the past, some of which are highly valuable, particularly those corresponding to southern hemisphere objects, which were historically less observed than those of the northern hemisphere during that period.
+In the 20th century, the acquisition of spectroscopic data using photographic techniques was widespread. This method consisted of recording spectra through photography, with the distinctive feature that the images were stored on glass plates rather than on photographic paper. The plates captured during this time have high historical and scientific value, as they contain information about astronomical objects in the past, some of which are highly valuable. Particularly those corresponding to southern hemisphere objects, which were historically less observed than those of the northern hemisphere during that period.
 Today, many of these plates are preserved in their original institutions~\cite{kunzmann2009real}. Figure~\ref{fig:glass_plate} shows a spectroscopic glass plate containing two observations on its surface.
 
 \begin{figure}[htb!]
@@ -129,7 +133,7 @@ In addition to physical deterioration, plates may present defects associated wit
         \caption{}
     \end{subfigure}
     \caption{
-        Samples of possible defects on the plates. Defects associated with prolonged storage: (a) Scratches.\@ (b) Dirt and/or moisture stains. Defects associated with the capture process: (c) Curved engraving.\@ (d) Missing comparison lamps.\@ (e) Comparison lamps without their respective spectrum.
+        Samples of possible defects on the plates: Defects associated with prolonged storage: (a) Scratches.\@ (b) Dirt and/or moisture stains. Defects associated with the capture process: (c) Curved engraving.\@ (d) Missing comparison lamps.\@ (e) Comparison lamps without their respective spectrum.
         }\label{fig:defectos_placas}
 \end{figure}
 
@@ -157,7 +161,7 @@ Each observation is defined as a bounding box enclosing the spectrum and its cor
 
 In previous work, we presented a YOLO-based detector~\cite{ronchetti2023software} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images applying data augmentation. The model achieved good performance for this detection task but showed limited precision when predicting the exact boundaries of observations.
 
-The predicted bounding boxes frequently misalign with the true observation boundaries, which can negatively impact downstream calibration steps. In particular, incomplete observation detections may lead to inaccuracies in wavelength calibration, thereby compromising the analysis of the extracted spectral information. 
+The predicted bounding boxes of the previously trained model frequently misalign with the true observation boundaries, which can negatively impact downstream calibration steps. In particular, incomplete observation detections may lead to inaccuracies in wavelength calibration, thereby compromising the analysis of the extracted spectral information. 
 
 \subsection{Evaluation metrics}
 
@@ -194,7 +198,7 @@ In this work, we present a tool to mitigate the issue of limited training data. 
 
 \section{G3SP}
 
-G3SP\footnote{\href{https://github.com/Sansanto2000/G3SP}{G3SP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation.
+G3SP\footnote{\href{https://github.com/Sansanto2000/G3SP}{G3SP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation. \textcolor{red}{The generated labels follow the YOLO annotation scheme \texttt{rel\_xywh}~\cite{redmon2016you}, where bounding boxes are represented by normalized center coordinates and dimensions.}
 
 The tool enables fine-grained control over the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured are shown in Table~\ref{tab:g3sp-parameters}.
 
@@ -211,32 +215,32 @@ All parameters are defined as ranges, ensuring that the generated observations e
     }\label{fig:example_generation}
 \end{figure}
 
-The generated labels follow the \texttt{rel\_xywh} format, according to the YOLO annotation scheme~\cite{redmon2016you}. This means that the coordinates of each observation are expressed as normalized values between 0 and 1.
-
-\begin{lstlisting}
-    <class_id> <x_center> <y_center> <width> <height>
-\end{lstlisting}
-
-\textit{\textless class\_id\textgreater} represents the detection class. Since only one class (observations) is considered, its value is always 0.\@ \textit{\textless x\_center\textgreater} and \textit{\textless y\_center\textgreater} correspond to the normalized coordinates of the bounding box center, while \textit{\textless width\textgreater} and \textit{\textless height\textgreater} represent its normalized dimensions. All values except \textit{\textless class\_id\textgreater} are expressed in the range $[0,1]$. Figure~\ref{fig:example_generation} shows examples of these annotations.
-
 G3SP can be installed as a package. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the implemented generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches effectively equivalent.
 
 \subsection{Available Data}
 
-For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata belonging to the recovery project ReTrOH\footnote{\href{https://retroh.fcaglp.unlp.edu.ar}{Project ReTrOH: Recovery of Historical Observational Work}}. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional 96,000 synthetic images were generated using G3SP to complement it.
+For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata belonging to the recovery project ReTrOH\footnote{\href{https://retroh.fcaglp.unlp.edu.ar}{Project ReTrOH: Recovery of Historical Observational Work}}. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional 96,000 synthetic images were generated using G3SP to complement it. Figure~\ref{fig:comparacion} shows a comparison between real and generated images.
 
-Each dataset was divided into training and test sets using an 80/20 split:
+Each dataset was divided into training and test sets using an 80/20 split
 
 \begin{itemize}
     \item Real images (361): 289 for training and 72 for testing.
     \item Generated images (96,000): 76,800 for training and 19,200 for testing.
 \end{itemize}
 
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/comparacion.png}
+    \caption{
+        Comparison between real and generated spectroscopic plate scans. Up real images, down generated images.
+    }\label{fig:comparacion}
+\end{figure}
+
 \section{Detection model}
 
 For this task, we adopted the YOLO architecture~\cite{redmon2016you}, specifically the lightweight variant \textit{yolo\_v26\_n} implemented in recent versions of the Ultralytics library~\cite{yolo26_ultralytics}. This variant is designed for real-time object detection, prioritizing computational efficiency while maintaining competitive performance.
 
-Training was performed using a batch size of 32 and an input image resolution of 640×640 pixels. Optimization parameters were automatically selected, with an initial learning rate of 0.01, a final learning rate factor of 0.01, momentum of 0.937, and weight decay of 0.0005. A warmup phase of 3 epochs was applied.
+Training was performed using a batch size of 32 and an input image resolution of 640×640 pixels. Optimization parameters were automatically selected, with an initial learning rate of 0.01, a final learning rate of 0.0001, momentum of 0.937, and weight decay of 0.0005. A warmup phase of 3 epochs was applied.
 
 The number of training epochs varied depending on the dataset: models trained on synthetic data were trained for 20 epochs, while those trained on real data were trained for 500 epochs. This difference is justified by the larger volume of synthetic samples compared to real ones.
 
@@ -256,12 +260,9 @@ With the baseline established, a second model was trained using only generated d
 
 Finally, a third model was trained using a combination of real and generated data. Specifically, the model was first trained on generated data and subsequently fine-tuned using real data. This approach aims to leverage the strengths of both datasets, providing a more diverse training set that captures the variability present in real plates while benefiting from the large volume of synthetic samples. The performance of this model was evaluated only on real data. As an additional experiment, we also evaluated the last model on the entire real dataset (real training set and real testing set). 
 
-\textcolor{red}{
-    Regarding data augmentation, it was applied to all models, including those trained on generated data. For synthetic data, augmentation is less necessary, as the generator already produces a wide variety of samples and the number of training epochs is relatively small, which reduces repetition. However, applying augmentation still helps introduce additional variability in the few samples that are repeated.
-}
-\textcolor{red}{
-    In contrast, augmentation is essential when training on real data, as the dataset is very limited and the model tends to overfit easily without it. Additionally, mosaic augmentation is particularly useful, as the random composition of images resembles certain configurations observed in real spectroscopic plates. While not specific to this dataset, it reflects realistic scenarios.
-}
+Regarding data augmentation, it was applied to all models, including those trained on generated data. For synthetic data, augmentation is less necessary, as the generator already produces a wide variety of samples and the number of training epochs is relatively small, which reduces repetition. However, applying augmentation still helps introduce additional variability, even when samples are revisited across training epochs.
+
+In contrast, augmentation is essential when training on real data, as the dataset is very limited and the model tends to overfit easily without it. Additionally, mosaic augmentation is particularly useful, as the random composition of images resembles certain configurations observed in real spectroscopic plates. While not specific to this dataset, it reflects realistic scenarios.
 
 To measure test performance, the mAP at different IoU thresholds was used ($mAP_{50}$ and $mAP_{50-95}$). This metric allows us to evaluate both the model's ability to detect the presence of observations and its precision in fitting their boundaries. 
 Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained with the model trained on generated data, on real data and trained on generated data and fine-tuned using a limited set of real images.
@@ -272,7 +273,7 @@ Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\r
     \centering
     \includegraphics[width=1\textwidth]{images/test_predictions.png}
     \caption{
-        Predictions obtained with the model trained on generated data and fine-tuned using a limited set of real images. Blue bounding boxes correspond to the ground truth, while red bounding boxes represent the model's predictions. The model achieves good performance in both detecting the presence of observations and accurately fitting their boundaries.
+        Predictions on real data obtained with the model trained on generated data and fine-tuned using a limited set of real images. Light blue bounding boxes correspond to the ground truth, while yellow bounding boxes represent the model's predictions. The model achieves strong performance in both detecting the presence of observations and accurately localizing their boundaries.
     }\label{fig:real_prediction_sample}
 \end{figure}
 

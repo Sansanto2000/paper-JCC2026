@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/main"] 1775785364.48511 "build/main.aux" "build/main.bbl" "build/main" 1775786784.20826 0
+["bibtex build/main"] 1775876329.50225 "build/main.aux" "build/main.bbl" "build/main" 1775876471.26299 0
   "./bibliography.bib" 1775776982 8846 8f15bfed800e95a516ce39922df93338 ""
   "./splncs04.bst" 1521129746 33694 ee21ae2a29028dc8ad842a97200982c7 ""
-  "build/main.aux" 1775786783 8809 31e2a03631cee2cc5c846efac2b10398 "pdflatex"
+  "build/main.aux" 1775876470 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1775786780.45265 "c:/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775786784.20901 0
+["pdflatex"] 1775876452.48031 "c:/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775876471.26374 0
   "C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773177707 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
   "C:/Users/santi/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1764004625 11548 392377e7b458fceae020c55e94034163 ""
   "C:/Users/santi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1764029446 24225047 22bf486ea44b29a5fcae9c5960883e68 ""
@@ -64,7 +64,6 @@
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1705273579 20144 147463a6a579f4597269ef9565205cfe ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty" 1705273578 3045 273c666a54e60b9f730964f431a56c1b ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty" 1705273579 2462 6bc53756156dbd71c1ad550d30a3b93f ""
-  "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/omlcmr.fd" 1705273579 2470 ec0f30a4dee212b06d8724b94d7d4f9a ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1705273578 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1705273578 2894 fc64867f9d198785eabe71a88276a9cb ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579093635 6253 f1cb470c9199e7110a27851508ed7a5c ""
@@ -108,24 +107,25 @@
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/main.aux" 1775786783 8809 31e2a03631cee2cc5c846efac2b10398 "pdflatex"
-  "build/main.bbl" 1775785364 5928 b8446226260c3f0fb618a59fdff24907 "bibtex build/main"
-  "build/main.out" 1775786783 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
-  "c:/Repositorios/paper-JCC2026/src/main.tex" 1775786779 30534 d3c29fed57e8ddd1fb2ccd8c00a552d2 ""
+  "build/main.aux" 1775876470 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
+  "build/main.bbl" 1775876329 5928 b8446226260c3f0fb618a59fdff24907 "bibtex build/main"
+  "build/main.out" 1775876470 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
+  "c:/Repositorios/paper-JCC2026/src/main.tex" 1775876451 30327 e73e1596b8c7eb373a766e1256c256b8 ""
+  "images/comparacion.png" 1775876443 2476240 ba7c3b3ca0f0ebb4d10ec74a93394c1f ""
   "images/defecto_curvo.png" 1764001119 31758 a6d27879cee943726b39d56f9dec822f ""
   "images/defecto_falta_espectro.png" 1764001119 15540 f342c832b848b880b82eb4c91ce9795c ""
   "images/defecto_falta_lampara.png" 1764001119 9402 de5d2f9c41248ba3b7657c6c911f3483 ""
   "images/defecto_humedad.png" 1764001119 25145 9107f576d88e396b7bd10964ec919fe6 ""
   "images/defecto_rayon.png" 1764001119 49482 eee17d7ebfbfa32e6cdc6b63d2f3119a ""
-  "images/generated_images.png" 1775776982 735059 e97418bf654e71d560b6f5ac0fc22280 ""
+  "images/generated_images.png" 1775876272 1500773 e5f5e2e5498cca1adb23833950c04a4a ""
   "images/glass-plate.png" 1764001119 104614 2955282843008543b4d959a83b9adcc2 ""
   "images/plot_real_labeled.png" 1774624667 1187272 897b01cbcde3d0d47b79170731c4fde4 ""
   "images/test_predictions.png" 1774625649 873360 df8616d5168f994f7ac9c33bfe17b5df ""
   "llncs.cls" 1521129700 43467 b08ec23e994470d7d8fc268d245cf555 ""
-  "main.tex" 1775786779 30534 d3c29fed57e8ddd1fb2ccd8c00a552d2 ""
+  "main.tex" 1775876451 30327 e73e1596b8c7eb373a766e1256c256b8 ""
   "tables/g3sp-parameters.tex" 1775784224 3862 ff6e51eeedc8af6cdda86a185f9d6ef9 ""
-  "tables/list-colections.tex" 1774626019 1240 a13e37ba06a4c55b64ca2837487ac324 ""
-  "tables/results.tex" 1775779145 1967 ff794c7d1c81e66ecf86e614594c9d1e ""
+  "tables/list-colections.tex" 1775847915 1235 27ca68009d5a4effa17d34bb8d0633bf ""
+  "tables/results.tex" 1775859862 1931 415178233589ca505c37f5a5d0e5ef4a ""
   (generated)
   "build/main.aux"
   "build/main.log"
