@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/main"] 1775876329.50225 "build/main.aux" "build/main.bbl" "build/main" 1775876471.26299 0
+["bibtex build/main"] 1775876329.50225 "build/main.aux" "build/main.bbl" "build/main" 1775877112.67556 0
   "./bibliography.bib" 1775776982 8846 8f15bfed800e95a516ce39922df93338 ""
   "./splncs04.bst" 1521129746 33694 ee21ae2a29028dc8ad842a97200982c7 ""
-  "build/main.aux" 1775876470 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
+  "build/main.aux" 1775877111 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1775876452.48031 "c:/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775876471.26374 0
+["pdflatex"] 1775877093.84169 "c:/Repositorios/paper-JCC2026/src/main.tex" "build/main.pdf" "main" 1775877112.67632 0
   "C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773177707 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
   "C:/Users/santi/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1764004625 11548 392377e7b458fceae020c55e94034163 ""
   "C:/Users/santi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1764029446 24225047 22bf486ea44b29a5fcae9c5960883e68 ""
@@ -107,10 +107,10 @@
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/santi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/main.aux" 1775876470 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
+  "build/main.aux" 1775877111 9240 b3105d88fe4add0d928d82155e0958d3 "pdflatex"
   "build/main.bbl" 1775876329 5928 b8446226260c3f0fb618a59fdff24907 "bibtex build/main"
-  "build/main.out" 1775876470 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
-  "c:/Repositorios/paper-JCC2026/src/main.tex" 1775876451 30327 e73e1596b8c7eb373a766e1256c256b8 ""
+  "build/main.out" 1775877111 468 a13337cbfb948adbd25f5ab9317069f6 "pdflatex"
+  "c:/Repositorios/paper-JCC2026/src/main.tex" 1775877103 30300 1cededa70050feebaee0bd0bd77839b9 ""
   "images/comparacion.png" 1775876443 2476240 ba7c3b3ca0f0ebb4d10ec74a93394c1f ""
   "images/defecto_curvo.png" 1764001119 31758 a6d27879cee943726b39d56f9dec822f ""
   "images/defecto_falta_espectro.png" 1764001119 15540 f342c832b848b880b82eb4c91ce9795c ""
@@ -122,9 +122,9 @@
   "images/plot_real_labeled.png" 1774624667 1187272 897b01cbcde3d0d47b79170731c4fde4 ""
   "images/test_predictions.png" 1774625649 873360 df8616d5168f994f7ac9c33bfe17b5df ""
   "llncs.cls" 1521129700 43467 b08ec23e994470d7d8fc268d245cf555 ""
-  "main.tex" 1775876451 30327 e73e1596b8c7eb373a766e1256c256b8 ""
+  "main.tex" 1775877103 30300 1cededa70050feebaee0bd0bd77839b9 ""
   "tables/g3sp-parameters.tex" 1775784224 3862 ff6e51eeedc8af6cdda86a185f9d6ef9 ""
-  "tables/list-colections.tex" 1775847915 1235 27ca68009d5a4effa17d34bb8d0633bf ""
+  "tables/list-colections.tex" 1775876985 1235 040ef3c9244f84193a82b778f9ffcda2 ""
   "tables/results.tex" 1775859862 1931 415178233589ca505c37f5a5d0e5ef4a ""
   (generated)
   "build/main.aux"
