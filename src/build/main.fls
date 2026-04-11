@@ -219,9 +219,9 @@ INPUT .\images\plot_real_labeled.png
 INPUT .\images\plot_real_labeled.png
 INPUT .\images\plot_real_labeled.png
 INPUT C:\Users\santi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT .\tables\g3sp-parameters.tex
-INPUT .\tables\g3sp-parameters.tex
-INPUT tables\g3sp-parameters.tex
+INPUT .\tables\gasp-parameters.tex
+INPUT .\tables\gasp-parameters.tex
+INPUT tables\gasp-parameters.tex
 INPUT C:\Users\santi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti9.tfm
 INPUT .\images\generated_images.png
 INPUT .\images\generated_images.png

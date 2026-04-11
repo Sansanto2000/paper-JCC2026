@@ -41,11 +41,6 @@ Kunzmann, B.: Real and virtual heritage--historical astronomical plate archives
   astrophysics and their influence on human knowledge and culture. Monuments
   and Sites  \textbf{18},  304--309 (2009)
 
-\bibitem{lin2014microsoft}
-Lin, T.Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D.,
-  Doll{\'a}r, P., Zitnick, C.L.: Microsoft coco: Common objects in context. In:
-  European conference on computer vision. pp. 740--755. Springer (2014)
-
 \bibitem{meilan2018recuperacion}
 Meilán, N.S.: Recuperación del patrimonio observacional histórico:
   Elaboración de un método óptimo de digitalización y extracción de datos.
@@ -97,14 +92,6 @@ Shang, Z.J., Yu, Y., Wang, L.L., Yang, M.T., Yang, J., Shen, S.Y., Liu, M., Xu,
   Q.F., Cui, C.Z., Fan, D.W., Tang, Z.H., Zhao, J.H.: Digitization of
   astronomical photographic plate of china and astrometric measurement of
   single-exposure plates (2024), \url{https://arxiv.org/abs/2403.09094}
-
-\bibitem{simcoe2006}
-Simcoe, R.J., Grindlay, J.E., Los, E.J., Doane, A., Laycock, S.G., Mink, D.J.,
-  Champine, G., Sliski, A.: {An ultrahigh-speed digitizer for the Harvard
-  College Observatory astronomical plates}. In: Tescher, A.G. (ed.)
-  Applications of Digital Image Processing XXIX. vol.~6312, p. 631217.
-  International Society for Optics and Photonics, SPIE (2006).
-  \doi{10.1117/12.681365}, \url{https://doi.org/10.1117/12.681365}
 
 \bibitem{placas_WFPDB}
 Tsvetkov, M.: The wide-field plate database: Development and access via

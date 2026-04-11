@@ -26,9 +26,9 @@
 
 \begin{document}
 %
-\title{G3SP\,: Generator of Synthetic Scans of Spectroscopic Plates for Object Detection}
+\title{GASP\,: Generator for Astronomical Spectroscopic Plates}
 %
-\titlerunning{G3SP}
+\titlerunning{GASP}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
@@ -69,9 +69,9 @@
     
     Despite ongoing initiatives, many plates remain undigitized, and the digitization process itself is time-consuming. Moreover, several downstream tasks required for scientific analysis—such as the detection and localization of spectral observations—are still performed manually. This step is particularly critical, as it is both labor-intensive and error-prone, creating a bottleneck in the data processing pipeline.
 
-    A major limitation for automating these tasks using modern computer vision methods is the scarcity of labeled data. In this work, we present G3SP (Generator of Synthetic Scans of Spectroscopic Plates), a tool designed to generate realistic, labeled scans of spectroscopic plates. The generated images incorporate domain-specific characteristics and simulated defects, such as dust, moisture artifacts, and illumination variations, while providing precise annotations for each observation.
+    A major limitation for automating these tasks using modern computer vision methods is the scarcity of labeled data. In this work, we present GASP (Generator for Astronomical Spectroscopic Plates), a tool designed to generate realistic, labeled scans of spectroscopic plates. The generated images incorporate domain-specific characteristics and simulated defects, such as dust, moisture artifacts, and illumination variations, while providing precise annotations for each observation.
     
-    To evaluate the usefulness of the proposed approach, we train an object detection model under three settings: using only real data, synthetic data, and their combination. Our results show that synthetic data generated with G3SP capture the underlying visual structure of spectroscopic plates and provide a strong basis for model generalization. In particular, models trained on synthetic data achieve competitive performance and further improve when combined with real data, reaching up to 0.995 $mAP_{50}$ and 0.95 $mAP_{50-95}$.
+    To evaluate the usefulness of the proposed approach, we trained an object detection model under three settings: using only real data, synthetic data, and their combination. Our results show that synthetic data generated with GASP captures the underlying visual structure of spectroscopic plates and provide a strong basis for model generalization. In particular, models trained on synthetic data achieve competitive performance and further improve when combined with real data, reaching up to 0.995 $mAP_{50}$ and 0.95 $mAP_{50-95}$.
     
     \keywords{
         Generated data, Object detection, Spectroscopic plates, Synthetic data
@@ -105,31 +105,31 @@ In addition to physical deterioration, plates may present defects associated wit
     \centering
     \begin{subfigure}[b]{0.30\textwidth}
         \centering
-        \includegraphics[height=5cm]{images/defecto_rayon.png}
+        \includegraphics[height=3.5cm]{images/defecto_rayon.png}
         \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.12\textwidth}
         \centering
-        \includegraphics[height=5cm]{images/defecto_humedad.png}
+        \includegraphics[height=3.5cm]{images/defecto_humedad.png}
         \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.12\textwidth}
         \centering
-        \includegraphics[height=5cm]{images/defecto_curvo.png}
+        \includegraphics[height=3.5cm]{images/defecto_curvo.png}
         \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.10\textwidth}
         \centering
-        \includegraphics[height=5cm]{images/defecto_falta_lampara.png}
+        \includegraphics[height=3.5cm]{images/defecto_falta_lampara.png}
         \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.10\textwidth}
         \centering
-        \includegraphics[height=5cm]{images/defecto_falta_espectro.png}
+        \includegraphics[height=3.5cm]{images/defecto_falta_espectro.png}
         \caption{}
     \end{subfigure}
     \caption{
@@ -143,7 +143,8 @@ To address these preservation challenges, many institutions have launched digiti
 
 \input{tables/list-colections}
 
-Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion,archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo,simcoe2006,shang2024digitizationastronomicalphotographicplate}. On average, scanning a plate takes approximately $15$--$30$ minutes. 
+Plates need to be digitized and calibrated in order to be useful for scientific work. Digitization consists of scanning the plate and storing its information in a digital format. Although the process presents several challenges, different approaches exist to accomplish this, either using adapted scanners~\cite{meilan2018recuperacion,archives_ukranian_observatories} or specialized hardware~\cite{robert2021naroo,shang2024digitizationastronomicalphotographicplate}. %simcoe2006
+On average, scanning a plate takes approximately $15$--$30$ minutes. 
 Calibration involves extracting relevant features from the plate and usually consists of several steps with varying levels of complexity. In previous work, we presented PlateUNLP, a software tool designed to assist in the calibration process. This tool can speed up calibration using machine learning, signal processing, and metadata-based approaches~\cite{ponte2025plateunlpv2}. In this work, we improve one stage of the calibration process, which consists of detecting observations in plate scans.
 
 \section{Detection problem}
@@ -153,7 +154,7 @@ Each observation is defined as a bounding box enclosing the spectrum and its cor
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=1\textwidth]{images/plot_real_labeled.png}
+    \includegraphics[width=0.95\textwidth]{images/plot_real_labeled.png}
     \caption{
         The images show examples of real spectroscopic plates. The bounding boxes enclose the regions corresponding to each observation, which consist of the spectrum and its corresponding comparison lamps. If the observation is too large, the delimiting box extends to the edge of the scan, as in the leftmost top image.
     }\label{fig:observation_detection_sample}
@@ -172,7 +173,7 @@ One metric that highlights this behavior is the mAP at different IoU thresholds.
     \label{eq:iou}
 \end{equation}
 
-The mAP (mean Average Precision) considers a detection to be correct if its IoU is greater than or equal to a given threshold. Based on this criterion, a precision-recall curve is constructed, and the area under this curve corresponds to the Average Precision (AP) (Equation~\ref{eq:ap}). When multiple classes are involved, AP is computed for each class and then averaged to obtain the mAP (Equation~\ref{eq:map}).\@ mAP values range from 0 to 1, with higher values indicating better detection and localization performance~\cite{everingham2010pascal,lin2014microsoft}.
+The mAP (mean Average Precision) considers a detection to be correct if its IoU is greater than or equal to a given threshold. Based on this criterion, a precision-recall curve is constructed, and the area under this curve corresponds to the Average Precision (AP) (Equation~\ref{eq:ap}). When multiple classes are involved, AP is computed for each class and then averaged to obtain the mAP (Equation~\ref{eq:map}).\@ mAP values range from 0 to 1, with higher values indicating better detection and localization performance~\cite{everingham2010pascal}. %lin2014microsoft
 
 \begin{equation}
     AP = \int_{0}^{1} p(r) dr
@@ -196,14 +197,14 @@ A straightforward solution to the small dataset problem is to acquire more data.
 
 In this work, we present a tool to mitigate the issue of limited training data. A procedural generator of synthetic spectroscopic plate scans is proposed, which enables the creation of large datasets with precise annotations. The generated images capture the underlying visual structure of spectroscopic plates, providing a strong basis for training object detection models. It enables training with small datasets while maintaining high detection performance for observations with precise positions and dimensions.
 
-\section{G3SP}
+\section{GASP}
 
-G3SP\footnote{\href{https://github.com/Sansanto2000/G3SP}{G3SP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation. \textcolor{red}{The generated labels follow the YOLO annotation scheme \texttt{rel\_xywh}~\cite{redmon2016you}, where bounding boxes are represented by normalized center coordinates and dimensions.}
+GASP\footnote{\href{https://github.com/Sansanto2000/GASP}{GASP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation. \textcolor{red}{The generated labels follow the YOLO annotation scheme \texttt{rel\_xywh}~\cite{redmon2016you}, where bounding boxes are represented by normalized center coordinates and dimensions.}
 
-The tool enables fine-grained control over the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured are shown in Table~\ref{tab:g3sp-parameters}.
+The tool enables fine-grained control over the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured are shown in Table~\ref{tab:gasp-parameters}.
 
 
-\input{tables/g3sp-parameters.tex}
+\input{tables/gasp-parameters.tex}
 
 All parameters are defined as ranges, ensuring that the generated observations exhibit the desired variability. The produced observations preserve the structural characteristics of spectroscopic plates. For example, the comparison lamps located on both sides of each science spectrum are always generated symmetrically. The generated images can also reproduce extreme cases that are present in real plates but are rare, such as plates with many observations, plates with observations that are very close to each other, or plates with a single observation occupying almost the entire plate. This variability allows the model to learn the general visual patterns of this type of plate, providing a strong basis for generalization for subsequent fine-tuning. Figure~\ref{fig:example_generation} shows examples of generated plate scans.
 
@@ -215,11 +216,11 @@ All parameters are defined as ranges, ensuring that the generated observations e
     }\label{fig:example_generation}
 \end{figure}
 
-G3SP can be installed as a package. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the implemented generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches effectively equivalent.
+GASP can be installed as a package. The library provides several functions for generating synthetic data directly from code. Users may either call these functions manually or use the provided generator object, which is compatible with TensorFlow pipelines. The generator internally relies on the same functions, making both approaches effectively equivalent.
 
 \subsection{Available Data}
 
-For this study, we use a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata belonging to the recovery project ReTrOH\footnote{\href{https://retroh.fcaglp.unlp.edu.ar}{Project ReTrOH: Recovery of Historical Observational Work}}. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional 96,000 synthetic images were generated using G3SP to complement it. Figure~\ref{fig:comparacion} shows a comparison between real and generated images.
+For this study, we used a dataset composed of 361 spectroscopic plates from the archive of the Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata belonging to the recovery project ReTrOH\footnote{\href{https://retroh.fcaglp.unlp.edu.ar}{Project ReTrOH: Recovery of Historical Observational Work}}. The dataset is publicly available\footnote{\href{https://drive.google.com/drive/folders/1RnGoeTOMmU03VMEa6nk-sVmuETUE-EBa?usp=sharing}{Observation Detection in Spectroscopic Plates Dataset}}. Since the dataset is relatively small, an additional 96,000 synthetic images were generated using GASP to complement it. Figure~\ref{fig:comparacion} shows a comparison between real and generated images.
 
 Each dataset was divided into training and test sets using an 80/20 split
 
@@ -238,7 +239,7 @@ Each dataset was divided into training and test sets using an 80/20 split
 
 \section{Detection model}
 
-For this task, we adopted the YOLO architecture~\cite{redmon2016you}, specifically the lightweight variant \textit{yolo\_v26\_n} implemented in recent versions of the Ultralytics library~\cite{yolo26_ultralytics}. This variant is designed for real-time object detection, prioritizing computational efficiency while maintaining competitive performance.
+For this task, we adopted the YOLO architecture~\cite{redmon2016you}, specifically the lightweight variant \textit{yolo\_v26\_n} implemented in recent versions of the Ultralytics library~\cite{yolo26_ultralytics}. %This variant is designed for real-time object detection, prioritizing computational efficiency while maintaining competitive performance.
 
 Training was performed using a batch size of 32 and an input image resolution of 640×640 pixels. Optimization parameters were automatically selected, with an initial learning rate of 0.01, a final learning rate of 0.0001, momentum of 0.937, and weight decay of 0.0005. A warmup phase of 3 epochs was applied.
 
@@ -260,18 +261,18 @@ With the baseline established, a second model was trained using only generated d
 
 Finally, a third model was trained using a combination of real and generated data. Specifically, the model was first trained on generated data and subsequently fine-tuned using real data. This approach aims to leverage the strengths of both datasets, providing a more diverse training set that captures the variability present in real plates while benefiting from the large volume of synthetic samples. The performance of this model was evaluated only on real data. As an additional experiment, we also evaluated the last model on the entire real dataset (real training set and real testing set). 
 
-Regarding data augmentation, it was applied to all models, including those trained on generated data. For synthetic data, augmentation is less necessary, as the generator already produces a wide variety of samples and the number of training epochs is relatively small, which reduces repetition. However, applying augmentation still helps introduce additional variability, even when samples are revisited across training epochs.
+Data augmentation was applied to all models, including those trained on generated data. For synthetic data, augmentation is less necessary, as the generator already produces a wide variety of samples and the number of training epochs is relatively small, which reduces repetition. However, applying augmentation still helps introduce additional variability, even when samples are revisited across epochs.
 
 In contrast, augmentation is essential when training on real data, as the dataset is very limited and the model tends to overfit easily without it. Furthermore, mosaic augmentation is particularly useful, as the random composition of images resembles certain configurations observed in real spectroscopic plates. While not specific to this dataset, it reflects realistic scenarios.
 
-To measure test performance, the mAP at different IoU thresholds was used ($mAP_{50}$ and $mAP_{50-95}$). This metric allows us to evaluate both the model's ability to detect the presence of observations and its precision in fitting their boundaries. 
+Test performance was evaluated using $mAP_{50}$ and $mAP_{50-95}$.
 Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\ref{fig:real_prediction_sample} shows example predictions obtained with the model trained on generated data, on real data and trained on generated data and fine-tuned using a limited set of real images.
 
 \input{tables/results.tex}
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=1\textwidth]{images/test_predictions.png}
+    \includegraphics[width=0.95\textwidth]{images/test_predictions.png}
     \caption{
         Predictions on real data obtained with the model trained on generated data and fine-tuned using a limited set of real images. Light blue bounding boxes correspond to the ground truth, while yellow bounding boxes represent the model's predictions. The model achieves strong performance in both detecting the presence of observations and accurately localizing their boundaries.
     }\label{fig:real_prediction_sample}
@@ -281,7 +282,7 @@ Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\r
 
 The first two evaluations in Table~\ref{tab:results} show that the model trained on real data achieves excellent performance in detecting and localizing observations, with a general detection score ($mAP_{50}$) of 0.992 and a more stringent metric ($mAP_{50-95}$) of 0.895. However, when the same model is evaluated on generated data, its performance drops significantly, reaching 0.662 and 0.419, respectively.
 
-This result indicates that the model is overfitting to the limited real training data. Since both the training and testing sets originate from the same real data distribution, they share many characteristics, which facilitates high performance despite overfitting. In contrast, the notable degradation when evaluated on generated data, which follows a different distribution, highlights the poor generalization capability of models trained exclusively on real data. Although data augmentation introduces some variability, it is clearly insufficient to ensure robust generalization.
+This result indicated that the model is overfitting to the limited real training data. Since both the training and testing sets originate from the same real data distribution, they share many characteristics, which facilitates high performance despite overfitting. In contrast, the notable degradation when evaluated on generated data, which follows a different distribution, highlights the poor generalization capability of models trained exclusively on real data. Although data augmentation introduces some variability, it is clearly insufficient to ensure robust generalization.
 
 The evaluation of the model trained exclusively on generated data shows a different behavior. When evaluated on real data, its performance decreases compared to the model trained on real data, achieving an $mAP_{50}$ of 0.92 and an $mAP_{50-95}$ of 0.755. However, its performance does not degrade when evaluated on data following the same synthetic distribution. On the contrary, the model achieves excellent results on generated data, with scores of 0.995 and 0.99 for $mAP_{50}$ and $mAP_{50-95}$, respectively.
 This is expected, as the model was trained on synthetic data. However, the fact that it maintains strong performance on both datasets, despite not being trained on real data, indicates a good generalization capability. This is a desirable characteristic that the baseline model does not exhibit.
@@ -291,11 +292,11 @@ This strategy achieves the best overall performance, with an $mAP_{50}$ of 0.995
 
 \section{Conclusions}
 
-Given the good performance of models based on data generated with G3SP, we can conclude that the pretraining of the model with generated data for observation detection in spectroscopic plates is a viable approach for achieving excellent performance and good generalization capability. This approach is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong generalization basis, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving its performance. In this sense, the performance achieved in previous works using only augmented real data was outperformed by this approach.
+Given the good performance of models based on data generated with GASP, we can conclude that the pretraining of the model with generated data for observation detection in spectroscopic plates is a viable approach for achieving excellent performance and good generalization capability. This approach is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong generalization basis, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving its performance. In this sense, the performance achieved in previous works using only augmented real data was outperformed by this approach.
 
-The synthetic spectroscopic plate scan generator presented in this work, G3SP, demonstrates—through the performance of models trained on its data—its ability to capture part of the complex patterns associated with this type of spectroscopic images. By generating realistic and diverse samples, the approach can be generalized and adapted to a wide range of spectroscopic scan scenarios. Its inherent randomness enables models to better handle plates containing multiple observations with varying spectral positions and shapes.
+The synthetic spectroscopic plate scan generator presented in this work, GASP, demonstrates—through the performance of models trained on its data—its ability to capture part of the complex patterns associated with this type of spectroscopic images. By generating realistic and diverse samples, the approach can be generalized and adapted to a wide range of spectroscopic scan scenarios. Its inherent randomness enables models to better handle plates containing multiple observations with varying spectral positions and shapes.
 
-In future work, we plan to enhance the generation capabilities of G3SP by producing more realistic images with increasingly complex patterns and a wider variety of defects. We also intend to extend the training and annotation process beyond observation detection to include the precise identification of individual components within each observation. This would represent a step forward in the automation of the full calibration process of spectroscopic plates, which remains a bottleneck in the processing pipeline of this type of historical, valuable, and vulnerable scientific heritage data.
+In future work, we plan to enhance the generation capabilities of GASP by producing more realistic images with increasingly complex patterns and a wider variety of defects. We also intend to extend the training and annotation process beyond observation detection to include the precise identification of individual components within each observation. This would represent a step forward in the automation of the full calibration process of spectroscopic plates, which remains a bottleneck in the processing pipeline of this type of historical, valuable, and vulnerable scientific heritage data.
 
 %
 % ---- Bibliography ----
