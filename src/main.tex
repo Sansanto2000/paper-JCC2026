@@ -65,7 +65,7 @@
 %
 \begin{abstract}
 
-    Spectroscopic analysis has a long tradition in astronomy, where stellar spectra were historically recorded on photographic plates. These plates constitute a valuable scientific and historical archive, enabling the study of long-term variability in astronomical objects. However, they are prone to degradation and information loss\textcolor{red}{, and the information they contain is difficult to access and process}, which has motivated large-scale digitization efforts.
+    Spectroscopic analysis has a long tradition in astronomy, where stellar spectra were historically recorded on photographic plates. These plates constitute a valuable scientific and historical archive, enabling the study of long-term variability in astronomical objects. However, they are prone to degradation and information loss, and the information they contain is difficult to access and process, which has motivated large-scale digitization efforts.
     
     Despite ongoing initiatives, many plates remain undigitized, and the digitization process itself is time-consuming. Moreover, several downstream tasks required for scientific analysis—such as the detection and localization of spectral observations—are still performed manually. This step is particularly critical, as it is both labor-intensive and error-prone, creating a bottleneck in the data processing pipeline.
 
@@ -199,7 +199,7 @@ In this work, we present a tool to mitigate the issue of limited training data. 
 
 \section{GASP}
 
-GASP\footnote{\href{https://github.com/Sansanto2000/GASP}{GASP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation. \textcolor{red}{The generated labels follow the YOLO annotation scheme \texttt{rel\_xywh}~\cite{redmon2016you}, where bounding boxes are represented by normalized center coordinates and dimensions.}
+GASP\footnote{\href{https://github.com/Sansanto2000/GASP}{GASP repository}} is a software tool designed to generate synthetic spectroscopic plate scan data. The generated images preserve a realistic appearance and allow the inclusion of artificial defects such as dust stains, moisture marks, reflections, among others. Each generated image is accompanied by labels containing the coordinates and shapes of each observation. The generated labels follow the YOLO annotation scheme \texttt{rel\_xywh}~\cite{redmon2016you}, where bounding boxes are represented by normalized center coordinates and dimensions.
 
 The tool enables fine-grained control over the generated data, such as observation geometry, observation layout, spectral characteristics, and the noise patterns. Some of the parameters that can be configured are shown in Table~\ref{tab:gasp-parameters}.
 
