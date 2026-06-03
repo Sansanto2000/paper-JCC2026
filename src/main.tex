@@ -15,6 +15,8 @@
 \usepackage{array}
 \usepackage{textcomp}
 \usepackage{listings}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 % Used for displaying a sample figure. If possible, figure files should
@@ -77,6 +79,28 @@
         Generated data, Object detection, Spectroscopic plates, Synthetic data
     }
 \end{abstract}
+
+\section{Introduction}
+
+\textcolor{red}{
+This work addresses a part of a major problem in the preservation of spectroscopic plates, which is the detection and localization of observations in plate scans. This task is an essential step in the calibration process, which is required to extract scientific information from digitized spectroscopic plates. Due to its complexity and the large volume of data involved, observation detection often becomes a bottleneck and is still commonly performed manually.
+}
+
+\textcolor{red}{
+In previous work, we presented a YOLO-based detector~\cite{ronchetti2023software} that automates observation detection in spectroscopic plates. The model was trained exclusively on real scan images using data augmentation techniques. Although the detector achieved good performance in identifying observations, it showed limited precision when predicting their exact boundaries.
+}
+
+\textcolor{red}{
+In this context, the main motivation of this work is to address the limited availability of training data. We propose a procedural generator of synthetic spectroscopic plate scans that enables the creation of large datasets with precise annotations. The generated images capture the underlying visual structure of spectroscopic plates, providing a strong basis for training object detection models with improved generalization capabilities. This approach enables effective training even when only a small amount of real data is available.
+}
+
+\textcolor{red}{
+The main contributions of this work are: the development of GASP, a generator of synthetic spectroscopic plate scans with automatic annotations; the generation of a large-scale synthetic dataset for observation detection; and an experimental evaluation demonstrating that pretraining with synthetic data followed by fine-tuning on real data improves both detection and localization performance.
+}
+
+\textcolor{red}{
+The remainder of this paper is organized as follows. Section 2 presents the background on spectroscopic plates and their preservation challenges. Section 3 describes the observation detection problem. Section 4 introduces GASP and the generated datasets. Section 5 details the detection model and the experimental evaluation. Finally, Section 6 presents the conclusions and future work.
+}
 
 \section{Spectroscopic Data}
 
@@ -279,8 +303,7 @@ Table~\ref{tab:results} shows the metrics obtained in each evaluation. Figure~\r
 \end{figure}
 
 \subsection{Analysis}
-
-The first two evaluations in Table~\ref{tab:results} show that the model trained on real data achieves excellent performance in detecting and localizing observations, with a general detection score ($mAP_{50}$) of 0.992 and a more stringent metric ($mAP_{50-95}$) of 0.895. However, when the same model is evaluated on generated data, its performance drops significantly, reaching 0.662 and 0.419, respectively.
+The first two evaluations in Table~\ref{tab:results} show that the model trained on real data achieves \textcolor{red}{\sout{excellent} strong} performance in detecting and localizing observations, with a general detection score ($mAP_{50}$) of 0.992 and a more stringent metric ($mAP_{50-95}$) of 0.895. However, when the same model is evaluated on generated data, its performance drops significantly, reaching 0.662 and 0.419, respectively.
 
 This result indicated that the model is overfitting to the limited real training data. Since both the training and testing sets originate from the same real data distribution, they share many characteristics, which facilitates high performance despite overfitting. In contrast, the notable degradation when evaluated on generated data, which follows a different distribution, highlights the poor generalization capability of models trained exclusively on real data. Although data augmentation introduces some variability, it is clearly insufficient to ensure robust generalization.
 
@@ -292,7 +315,7 @@ This strategy achieves the best overall performance, with an $mAP_{50}$ of 0.995
 
 \section{Conclusions}
 
-Given the good performance of models based on data generated with GASP, we can conclude that the pretraining of the model with generated data for observation detection in spectroscopic plates is a viable approach for achieving excellent performance and good generalization capability. This approach is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong generalization basis, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving its performance. In this sense, the performance achieved in previous works using only augmented real data was outperformed by this approach.
+Given the \textcolor{red}{\sout{good}} performance of models based on generated data with GASP, we conclude that pretraining with generated data for observation detection in spectroscopic plates is a viable approach that \textcolor{red}{\sout{achieving excellent} improves} performance and \textcolor{red}{promotes} good generalization capability. This option is particularly relevant in scenarios where the availability of real training data is limited, as is the case with spectroscopic plates. The generated data provides a strong basis for generalization, enabling the model to learn the underlying visual patterns of this type of plate. Moreover, fine-tuning with real data allows the model to capture complex patterns present in real images, further improving performance. \textcolor{red}{\sout{In this sense, the performance achieved in previous works using only augmented real data was outperformed by this approach.}} \textcolor{red}{In our experiments, this approach outperformed the use of augmented real data alone}.
 
 The synthetic spectroscopic plate scan generator presented in this work, GASP, demonstrates—through the performance of models trained on its data—its ability to capture part of the complex patterns associated with this type of spectroscopic images. By generating realistic and diverse samples, the approach can be generalized and adapted to a wide range of spectroscopic scan scenarios. Its inherent randomness enables models to better handle plates containing multiple observations with varying spectral positions and shapes.
 
